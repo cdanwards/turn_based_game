@@ -24,7 +24,7 @@ body {
     font-size: 60px;
     margin-top: -80px;
     margin-bottom: 90px;
-    margin-right: -45px;
+    margin-right: -95px;
     align-self: flex-end;
     color: white;
     font-family: 'Press Start 2P', cursive;
@@ -32,13 +32,16 @@ body {
 
   .start {
     margin-top: 80px;
-    color: #fff;
+    color: #B46F9B;
     padding: .5em 1.75em;
     font-size: 50px;
     font-family: 'Press Start 2P', cursive;
+    border: 1px solid rgba(147, 128, 108, .25);
+    background-color: #6E0047;
 
     &:hover {
-      color: #964175;
+      color: #fff;
+      background-color: #964175;
   }
 }
 }
@@ -46,4 +49,5 @@ body {
 .start-screen-logo {
   display: block;
   flex: 1;
+  margin-left: -50px;
 }
