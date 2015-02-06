@@ -6,7 +6,7 @@ var start = new Audio('sounds/yeah.mp3');
 
 $('.start').on('click', function(){
   start.play();
-  $(".start-screen-container").addClass("hidden");
+  $(".start-screen-container").hide();
 });
 
 });
