@@ -1,6 +1,12 @@
 $(document).ready(function() {
 
+
   // Code for the start screen
+=======
+/*
+    Audo for start screen
+*/
+
 
 
   // Audio for start screen
@@ -27,5 +33,21 @@ $(document).ready(function() {
     function(characterData){
     $characterOutput.append(renderCharacterTemplate(characterData));
   });
+
+
+
+
+
+
+/*
+  Templete function
+*/
+  function renderTemplate(name, data) {
+    var $template = $('[data-template-name=' + name + ']').text();
+    $.each(data, function(prop, value) {
+      $template = $template.replace('<% ' + prop + ' %>', value);
+    });
+    return $template;
+  }
 
 });
