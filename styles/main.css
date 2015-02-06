@@ -1,0 +1,40 @@
+body {
+  background-image: url("../images/background.png");
+  background-size: cover; }
+
+.hidden {
+  display: none; }
+
+.start-screen-container {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 730px; }
+  .start-screen-container .fight {
+    font-size: 60px;
+    margin-top: -80px;
+    margin-bottom: 90px;
+    margin-right: -45px;
+    align-self: flex-end;
+    color: white;
+    font-family: 'Press Start 2P', cursive; }
+  .start-screen-container .start {
+    margin-top: 80px;
+    color: #fff;
+    padding: .5em 1.75em;
+    font-size: 50px;
+    font-family: 'Press Start 2P', cursive; }
+    .start-screen-container .start:hover {
+      color: #964175; }
+
+.start-screen-logo {
+  display: block;
+  flex: 1; }
+
+/*# sourceMappingURL=main.css.map */

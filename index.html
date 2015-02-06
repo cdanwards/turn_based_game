@@ -3,9 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <title>turn_based_game</title>
-  <link href="styles/main.css" />
+  <link rel="stylesheet" href="styles/main.css" />
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet" type="text/css">
 </head>
 <body>
+  <audio autoplay loop>
+    <source src="sounds/theme.mp3" type="audio/mpeg">
+  </audio>
+
+<div class="start-screen-container">
+
+  <img class="start-screen-logo" src="images/logo.png" alt="Regular Show">
+  <span class="fight">FIGHT!</span>
+  <span class="start">START</span>
+
+</div>
 
 <script src="bower_components/jquery/dist/jquery.js"></script>
 <script src="bower_components/underscore/underscore.js"></script>
