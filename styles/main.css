@@ -97,6 +97,11 @@ body {
     font-family: 'Press Start 2P', cursive;
     font-size: 20px; }
 
+.rigby-background {
+  background-image: url("../images/rigby.png");
+  background-size: cover;
+  background-position: center center; }
+
 .benson {
   padding: 5px;
   background-image: url("../images/benson.png");
@@ -107,6 +112,10 @@ body {
   .benson span {
     font-family: 'Press Start 2P', cursive;
     font-size: 20px; }
+
+.benson-background {
+  background-image: url("../images/benson.png");
+  background-size: cover; }
 
 .pops {
   padding: 5px;
@@ -119,6 +128,10 @@ body {
     font-family: 'Press Start 2P', cursive;
     font-size: 20px; }
 
+.pops-background {
+  background-image: url("../images/pops.png");
+  background-size: cover; }
+
 .skips {
   padding: 5px;
   background-image: url("../images/skips.png");
@@ -130,6 +143,10 @@ body {
     font-family: 'Press Start 2P', cursive;
     font-size: 20px; }
 
+.skips-background {
+  background-image: url("../images/skips.png");
+  background-size: cover; }
+
 .muscleman {
   padding: 5px;
   background-image: url("../images/muscleman.png");
@@ -140,6 +157,10 @@ body {
   .muscleman span {
     font-family: 'Press Start 2P', cursive;
     font-size: 20px; }
+
+.muscleman-background {
+  background-image: url("../images/muscleman.png");
+  background-size: cover; }
 
 .player-box-container {
   display: flex;
