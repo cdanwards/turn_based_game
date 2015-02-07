@@ -24,8 +24,7 @@ $('.start').on('click', function(){
 
 
 // Character Select page
-
-$('.mordecai').on('click', function(){
+$characterOuput.on('click', '.mordecai', function() {
   alert('clicked');
   $('.selected-character').addClass('mordecai');
 });
