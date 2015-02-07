@@ -13,7 +13,7 @@ var skips = new Audio('sounds/skips.mp3');
 var muscleman = new Audio('sounds/muscleman.mp3');
 
 
-// sdfsdfwefwe
+// Selected character that is stored when a character is selected
 var selectedCharacter;
 
 // Character select div
@@ -32,7 +32,6 @@ $('.start').on('click', function(){
     $characterOutput.append(renderCharacterTemplate(characterData));
   }
   renderTemplate();
-  console.log('erik');
 
   $('#fight-button').on('click',function(){
     selectedCharacter = $('#selected-character').attr('value');
@@ -45,10 +44,7 @@ $('.start').on('click', function(){
 //   $('.selected-character').addClass('mordecai-background');
 // });
 //
-// $characterOutput.on('click', '.rigby', function() {
-//   // alert('clicked');
-//   $('.selected-character').addClass('rigby-background');
-// });
+
 var characterNames = ["mordecai", "rigby", "benson", "pops", "skips", "muscleman"];
 
 characterNames.forEach(function(char) {

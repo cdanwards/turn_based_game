@@ -172,8 +172,8 @@ body {
 
 #selected-character {
   display: inline-block;
-  margin-top: 20px;
-  margin-left: 11px;
+  margin: 10px auto 25px;
+  position: relative;
   padding: 5px;
   align-self: flex-start;
   background-color: green;
@@ -205,7 +205,7 @@ body {
 
 #fight-button {
   display: block;
-  margin: 30px auto;
+  margin: 0 auto;
   position: relative;
   color: #B46F9B;
   padding: .5em 1.75em;
