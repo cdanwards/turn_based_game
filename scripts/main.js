@@ -18,9 +18,11 @@ var selectedCharacter;
 
 // Character select div
 var $characterOutput = $('.character-screen');
+var $fightOutput = $('.fight-screen');
 
 //Template
 var renderCharacterTemplate = _.template($('.character-select').html());
+var renderFightTemplate = _.template($('.fight-screen-container').html());
 
 // Character select screen
 $('.start').on('click', function(){
@@ -36,6 +38,13 @@ $('.start').on('click', function(){
   $('#fight-button').on('click',function(){
     selectedCharacter = $('#selected-character').attr('value');
     console.log(selectedCharacter);
+    $(".character-screen").hide();
+
+    function renderTemplate(data){
+      $fightOutput.append(renderFightTemplate(data));
+    }
+    renderTemplate();
+    return playerFight;
   });
 });
 
@@ -46,13 +55,14 @@ $('.start').on('click', function(){
 //
 
 var characterNames = ["mordecai", "rigby", "benson", "pops", "skips", "muscleman"];
-
+var playerFight;
 characterNames.forEach(function(char) {
     $characterOutput.on('click', '.'+char, function(e) {
         // alert('click on ' + char + '!');
         $('#selected-character').removeClass().addClass(char + '-background').attr('value', char + 'Character');
-
+        playerFight =  $('#selected-character-fight').addClass(char + '-background').attr('value', char + 'Character');
         eval(char).play();
+        console.log(playerFight);
     });
 });
 
