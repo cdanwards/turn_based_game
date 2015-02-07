@@ -20,29 +20,28 @@ var Villain = function (options) {
   _.extend(this, options);
 };
 
-var mordecaiCharacter = new Character({
-  name: 'Mordecai'
-});
 
-var rigbyCharacter = new Character({
-  name: 'Rigby'
-});
+var characters = {
+  mordecaiCharacter : new Character({
+    name: 'Mordecai'
+  }),
+  rigbyCharacter : new Character({
+    name: 'Rigby'
+  }),
+  bensonCharacter : new Character({
+    name: 'Benson'
+  }),
+  popsCharacter : new Character({
+    name: 'Rigby'
+  }),
+  skipsCharacter : new Character({
+    name: 'Skips'
+  }),
+  musclemanCharacter : new Character({
+    name: 'Muscleman'
+  }),
+};
 
-var bensonCharacter = new Character({
-  name: 'Benson'
-});
-
-var popsCharacter = new Character({
-  name: 'Pops'
-});
-
-var skipsCharacter = new Character({
-  name: 'Skips'
-});
-
-var muscleManCharacter = new Character({
-  name: 'Musicle Man'
-});
 
 var deathVillain = new Villain({
   name: 'Death'
