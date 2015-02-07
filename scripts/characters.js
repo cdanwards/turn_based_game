@@ -17,30 +17,31 @@ var Villain = function (options) {
     health: 100;
   });
   _.extend(this, options);
+
 };
 
 var mordecaiCharacter = new Character({
-
+  name: 'Mordecai'
 });
 
 var rigbyCharacter = new Character({
-
+  name: 'Rigby'
 });
 
 var bensonCharacter = new Character({
-
+  name: 'Benson'
 });
 
 var popsCharacter = new Character({
-
+  name: 'Pops'
 });
 
 var skipsCharacter = new Character({
-
+  name: 'Skips'
 });
 
 var muscleManCharacter = new Character({
-
+  name: 'Musicle Man'
 });
 
 var deathVillain = new Villain({
