@@ -13,6 +13,7 @@ var skips = new Audio('sounds/skips.mp3');
 var muscleman = new Audio('sounds/muscleman.mp3');
 
 
+
 // Selected character that is stored when a character is selected
 var selectedCharacter;
 
@@ -60,7 +61,7 @@ characterNames.forEach(function(char) {
     $characterOutput.on('click', '.'+char, function(e) {
         // alert('click on ' + char + '!');
         $('#selected-character').removeClass().addClass(char + '-background').attr('value', char + 'Character');
-        playerFight =  $('#selected-character-fight').addClass(char + '-background').attr('value', char + 'Character');
+        playerFight =  $('.selected-character-fight').addClass(char + '-background').attr('value', char + 'Character');
         eval(char).play();
         console.log(playerFight);
     });
