@@ -63,11 +63,10 @@ var playerFight;
 characterNames.forEach(function(char) {
     $characterOutput.on('click', '.'+char, function(e) {
         // alert('click on ' + char + '!');
-        $('#selected-character').removeClass().addClass(char + '-background').attr('value', char + 'Character');
+        $('#selected-character').removeClass().addClass(char + '-background').attr('data-value', char + 'Character');
         playerFight =  $('.selected-character-fight').addClass(char + '-background').attr('value', char + 'Character');
         sounds[char].play();
         charBackground = char;
-        console.log(playerFight);
     });
 });
 
