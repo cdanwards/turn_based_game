@@ -16,6 +16,7 @@ var muscleman = new Audio('sounds/muscleman.mp3');
 
 // Selected character that is stored when a character is selected
 var selectedCharacter;
+var charBackground;
 
 // Character select div
 var $characterOutput = $('.character-screen');
@@ -45,7 +46,9 @@ $('.start').on('click', function(){
       $fightOutput.append(renderFightTemplate(data));
     }
     renderTemplate();
-    return playerFight;
+    $('.selected-character-fight').addClass(charBackground + '-background');
+
+
   });
 });
 
@@ -62,7 +65,9 @@ characterNames.forEach(function(char) {
         // alert('click on ' + char + '!');
         $('#selected-character').removeClass().addClass(char + '-background').attr('value', char + 'Character');
         playerFight =  $('.selected-character-fight').addClass(char + '-background').attr('value', char + 'Character');
+        // playerFight =  $('.selected-character-fight').addClass(char + '-background').attr('value', char + 'Character');
         eval(char).play();
+        charBackground = char;
         console.log(playerFight);
     });
 });
