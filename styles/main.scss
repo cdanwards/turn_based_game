@@ -59,3 +59,96 @@ body {
     color: white;
   }
 }
+
+.characterbox {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  margin: 0 auto;
+
+  li {
+    width: 200px;
+    height: 200px;
+    margin: 15px 15px;
+    border: 2px solid white;
+  }
+}
+
+.mordecai {
+  padding: 5px;
+  background-image: url('../images/mordecai.png');
+  background-size: cover;
+
+  span {
+    padding-top: 5px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 20px;
+  }
+
+}
+
+.rigby {
+  padding: 5px;
+  background-image: url('../images/rigby.png');
+  background-size: cover;
+  background-position: center center;
+
+  span {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 20px;
+  }
+
+}
+
+.benson {
+  padding: 5px;
+  background-image: url('../images/benson.png');
+  background-size: cover;
+
+  span {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 20px;
+  }
+
+}
+
+.pops {
+  padding: 5px;
+  background-image: url('../images/pops.png');
+  background-size: cover;
+
+  span {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 20px;
+  }
+
+}
+
+.skips {
+  padding: 5px;
+  background-image: url('../images/skips.png');
+  background-size: cover;
+
+  span {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 20px;
+  }
+
+}
+
+.muscleman {
+  padding: 5px;
+  background-image: url('../images/muscleman.png');
+  background-size: cover;
+
+  span {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 20px;
+  }
+
+}
