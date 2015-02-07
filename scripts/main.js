@@ -12,6 +12,10 @@ var pops = new Audio('sounds/pops.mp3');
 var skips = new Audio('sounds/skips.mp3');
 var muscleman = new Audio('sounds/muscleman.mp3');
 
+
+// sdfsdfwefwe
+var selectedCharacter;
+
 // Character select div
 var $characterOutput = $('.character-screen');
 
@@ -28,6 +32,12 @@ $('.start').on('click', function(){
     $characterOutput.append(renderCharacterTemplate(characterData));
   }
   renderTemplate();
+  console.log('erik');
+
+  $('#fight-button').on('click',function(){
+    selectedCharacter = $('#selected-character').attr('value');
+    console.log(selectedCharacter);
+  });
 });
 
 // $characterOutput.on('click', '.mordecai', function() {
@@ -44,13 +54,13 @@ var characterNames = ["mordecai", "rigby", "benson", "pops", "skips", "muscleman
 characterNames.forEach(function(char) {
     $characterOutput.on('click', '.'+char, function(e) {
         // alert('click on ' + char + '!');
-        $('#selected-character').removeClass().addClass(char + '-background');
+        $('#selected-character').removeClass().addClass(char + '-background').attr('value', char + 'Character');
 
         eval(char).play();
-
     });
 });
 
 
 });
+
 })();

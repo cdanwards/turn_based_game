@@ -3,9 +3,9 @@
 
 var Character = function (options) {
   options = options || {};
-  _.deafaults(options, {
+  _.defaults(options, {
     health: 100,
-    strength: 10
+    strength: 10,
   });
 };
 
@@ -32,5 +32,9 @@ var skipsCharacter = new Character({
 var muscleManCharacter = new Character({
 
 });
+
+Character.prototype.attack = function(i) {
+  i.health -= strength;
+};
 
 })();
