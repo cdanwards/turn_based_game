@@ -6,13 +6,9 @@ body {
   display: none; }
 
 .start-screen-container {
-  display: -webkit-flex;
   display: flex;
-  -webkit-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: center;
   align-items: center;
-  -webkit-justify-content: center;
   justify-content: center;
   margin: 0 auto;
   width: 730px; }
@@ -54,18 +50,17 @@ body {
     color: white; }
 
 .characterbox {
-  display: -webkit-flex;
   display: flex;
-  -webkit-flex-direction: row;
+  padding: 0;
   flex-direction: row;
-  -webkit-align-items: center;
   align-items: center;
-  -webkit-justify-content: center;
   justify-content: center;
   margin: 0 auto; }
   .characterbox li {
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
+    min-width: 180px;
+    min-height: 180px;
     margin: 10px;
     border: 2px solid white; }
 
@@ -130,7 +125,8 @@ body {
 
 .pops-background {
   background-image: url("../images/pops.png");
-  background-size: cover; }
+  background-size: cover;
+  background-position: 10px 0px; }
 
 .skips {
   padding: 5px;
@@ -164,16 +160,17 @@ body {
 
 .player-box-container {
   display: flex;
+  padding: 0;
   flex-direction: row;
   /*   align-items: center;
   justify-content: center */
   margin: 0 auto;
   width: 730px; }
 
-.selected-character {
+#selected-character {
   display: inline-block;
   margin-top: 10px;
-  margin-left: 45px;
+  margin-left: 25px;
   padding: 5px;
   align-self: flex-start;
   background-color: green;
@@ -181,22 +178,34 @@ body {
   height: 200px;
   border: 2px solid white; }
 
+.vs-character-select {
+  margin-top: 90px;
+  margin-left: 53px;
+  color: white;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 80px; }
+
 .opponent-character {
   display: inline-block;
   margin-top: 10px;
-  margin-left: 45px;
+  margin-left: 41px;
   padding: 5px;
   align-self: flex-end;
-  background-color: green;
+  background-color: red;
   width: 200px;
   height: 200px;
   border: 2px solid white; }
 
-.vs-character-select {
-  margin-top: 100px;
-  margin-left: 40px;
-  color: white;
+.fight-button {
+  margin: 40px 0 40px 500px;
+  color: #B46F9B;
+  padding: .5em 1.75em;
+  font-size: 50px;
   font-family: 'Press Start 2P', cursive;
-  font-size: 80px; }
+  border: 1px solid rgba(147, 128, 108, 0.25);
+  background-color: #6E0047; }
+  .fight-button:hover {
+    color: #fff;
+    background-color: #964175; }
 
 /*# sourceMappingURL=main.css.map */

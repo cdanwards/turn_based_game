@@ -9,8 +9,8 @@
 </head>
 <body>
   <audio autoplay loop>
-    <source src="sounds/theme.mp3" type="audio/mpeg">
-  </audio>
+<!--     <source src="sounds/theme.mp3" type="audio/mpeg">
+ -->  </audio>
 
 
 <div class="character-screen"></div>
@@ -44,9 +44,6 @@
       <li class="benson">
         <span>Benson</span>
       </li>
-    </ul>
-
-    <ul class="characterbox">
       <li class="pops">
         <span>Pops</span>
       </li>
@@ -58,11 +55,25 @@
       </li>
     </ul>
 
+<!--     <ul class="characterbox">
+  <li class="pops">
+    <span>Pops</span>
+  </li>
+  <li class="skips">
+    <span>Skips</span>
+  </li>
+  <li class="muscleman">
+    <span>Muscleman</span>
+  </li>
+</ul> -->
+
     <div class="player-box-container">
-      <div class="selected-character"></div>
+      <div id="selected-character" class=""></div>
       <span class="vs-character-select">VS</span>
       <div class="opponent-character"></div>
     </div>
+
+    <button class="fight-button">FIGHT</button>
 
 
   </div>
