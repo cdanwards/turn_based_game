@@ -22,4 +22,12 @@ $('.start').on('click', function(){
 });
 
 
+// Character Select page
+
+$('.mordecai').on('click', function(){
+  $('.c-screen-player-box').addClass('mordecai');
+});
+
+
+
 });

@@ -41,6 +41,13 @@ body {
   flex: 1;
   margin-left: -50px; }
 
+.choose-figher {
+  margin: 20px 0;
+  text-align: center;
+  color: white;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 20px; }
+
 .characterbox li {
   list-style: none; }
   .characterbox li span {
@@ -59,7 +66,7 @@ body {
   .characterbox li {
     width: 200px;
     height: 200px;
-    margin: 15px 15px;
+    margin: 10px;
     border: 2px solid white; }
 
 .mordecai {
@@ -129,5 +136,42 @@ body {
   .muscleman span {
     font-family: 'Press Start 2P', cursive;
     font-size: 20px; }
+
+.player-box-container {
+  display: flex;
+  flex-direction: row;
+  /*   align-items: center;
+  justify-content: center */
+  margin: 0 auto;
+  width: 730px; }
+
+.selected-character {
+  display: inline-block;
+  margin-top: 10px;
+  margin-left: 45px;
+  padding: 5px;
+  align-self: flex-start;
+  background-color: green;
+  width: 200px;
+  height: 200px;
+  border: 2px solid white; }
+
+.opponent-character {
+  display: inline-block;
+  margin-top: 10px;
+  margin-left: 45px;
+  padding: 5px;
+  align-self: flex-end;
+  background-color: green;
+  width: 200px;
+  height: 200px;
+  border: 2px solid white; }
+
+.vs-character-select {
+  margin-top: 100px;
+  margin-left: 40px;
+  color: white;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 80px; }
 
 /*# sourceMappingURL=main.css.map */
