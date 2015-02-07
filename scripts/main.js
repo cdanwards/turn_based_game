@@ -38,7 +38,7 @@ $('.start').on('click', function(){
   renderTemplate();
 
   $('#fight-button').on('click',function(){
-      selectedCharacter = charactersObject.charClicked;
+      selectedCharacter = charactersObject[charClicked];
     $(".character-screen").hide();
     console.log(selectedCharacter);
 
@@ -102,16 +102,16 @@ var charactersObject = {
     name: 'Rigby',
     shit: 'shit'
   }),
-  bensonCharacter : new Character({
+  benson : new Character({
     name: 'Benson'
   }),
-  popsCharacter : new Character({
-    name: 'Rigby'
+  pops : new Character({
+    name: 'pops'
   }),
-  skipsCharacter : new Character({
+  skips : new Character({
     name: 'Skips'
   }),
-  musclemanCharacter : new Character({
+  muscleman : new Character({
     name: 'Muscleman'
   }),
 };
