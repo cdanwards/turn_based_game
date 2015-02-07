@@ -1,5 +1,3 @@
-(function(){
-  'use strict';
 
 var Character = function (options) {
   options = options || {};
@@ -22,22 +20,23 @@ var Villain = function (options) {
 
 
 var charactersObject = {
-  mordecaiCharacter : new Character({
+  mordecai : new Character({
     name: 'Mordecai'
   }),
-  rigbyCharacter : new Character({
-    name: 'Rigby'
+  rigby : new Character({
+    name: 'Rigby',
+    shit: 'shit'
   }),
-  bensonCharacter : new Character({
+  benson : new Character({
     name: 'Benson'
   }),
-  popsCharacter : new Character({
-    name: 'Rigby'
+  pops : new Character({
+    name: 'Pops'
   }),
-  skipsCharacter : new Character({
+  skips : new Character({
     name: 'Skips'
   }),
-  musclemanCharacter : new Character({
+  muscleman : new Character({
     name: 'Muscleman'
   }),
 };
@@ -76,5 +75,3 @@ var theMasterPrankCallerVillain = new Villain({
 Character.prototype.attack = function(i) {
   i.health -= strength;
 };
-
-})();
