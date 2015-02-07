@@ -12,7 +12,8 @@ var Character = function (options) {
 var Villain = function (options) {
   options = options || {};
   _.defaults(options, {
-    attack: _.random(10, 45),
+    attackUpper: 40,
+    attackLower: 10,
     health: 100
   });
   _.extend(this, options);
