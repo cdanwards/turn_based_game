@@ -4,15 +4,15 @@
 $(document).ready(function() {
 
 // Sounds
-var start = new Audio('sounds/yeah.mp3');
-var mordecai = new Audio('sounds/mordecai.mp3');
-var rigby = new Audio('sounds/rigby.mp3');
-var benson = new Audio('sounds/benson.mp3');
-var pops = new Audio('sounds/pops.mp3');
-var skips = new Audio('sounds/skips.mp3');
-var muscleman = new Audio('sounds/muscleman.mp3');
-
-
+var sounds = {
+  start : new Audio('sounds/yeah.mp3'),
+  mordecai : new Audio('sounds/mordecai.mp3'),
+  rigby : new Audio('sounds/rigby.mp3'),
+  benson : new Audio('sounds/benson.mp3'),
+  pops : new Audio('sounds/pops.mp3'),
+  skips : new Audio('sounds/skips.mp3'),
+  muscleman : new Audio('sounds/muscleman.mp3')
+};
 
 // Selected character that is stored when a character is selected
 var selectedCharacter;
@@ -28,7 +28,7 @@ var renderFightTemplate = _.template($('.fight-screen-container').html());
 
 // Character select screen
 $('.start').on('click', function(){
-  start.play();
+  sounds.start.play();
   $(".theme-song").detach();
   $(".start-screen-container").hide();
 
@@ -65,8 +65,7 @@ characterNames.forEach(function(char) {
         // alert('click on ' + char + '!');
         $('#selected-character').removeClass().addClass(char + '-background').attr('value', char + 'Character');
         playerFight =  $('.selected-character-fight').addClass(char + '-background').attr('value', char + 'Character');
-        // playerFight =  $('.selected-character-fight').addClass(char + '-background').attr('value', char + 'Character');
-        eval(char).play();
+        sounds[char].play();
         charBackground = char;
         console.log(playerFight);
     });
