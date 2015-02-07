@@ -17,7 +17,6 @@ var Villain = function (options) {
     health: 100;
   });
   _.extend(this, options);
-
 };
 
 var mordecaiCharacter = new Character({
@@ -45,26 +44,32 @@ var muscleManCharacter = new Character({
 });
 
 var deathVillain = new Villain({
+  name: 'Death'
 
 });
 
 var thomasVillain = new Villain({
+  name: 'Thomas'
 
 });
 
 var garrettBobbyFergusonVillain = new Villain({
+  name: 'Garrett Bobby Ferguson'
 
 });
 
 var iacedromAndYbigrVillain = new Villain({
+  name: 'Iacedrom And Ybigr'
 
 });
 
 var summertimeSongVillain = new Villain({
+  name: 'Summertime Song'
 
 });
 
-var deathVillain = new Villain({
+var theMasterPrankCallerVillain = new Villain({
+  name: 'The Master Prank Caller'
 
 });
 
