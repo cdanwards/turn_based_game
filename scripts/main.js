@@ -72,6 +72,8 @@ characterNames.forEach(function(char) {
 });
 
 
+
+
 });
 
 })();
