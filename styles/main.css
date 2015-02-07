@@ -65,7 +65,10 @@ body {
 .mordecai {
   padding: 5px;
   background-image: url("../images/mordecai.png");
-  background-size: cover; }
+  background-size: cover;
+  cursor: pointer; }
+  .mordecai:hover {
+    background-color: rgba(180, 111, 155, 0.45); }
   .mordecai span {
     padding-top: 5px;
     font-family: 'Press Start 2P', cursive;
@@ -75,7 +78,10 @@ body {
   padding: 5px;
   background-image: url("../images/rigby.png");
   background-size: cover;
-  background-position: center center; }
+  background-position: center center;
+  cursor: pointer; }
+  .rigby:hover {
+    background-color: rgba(180, 111, 155, 0.45); }
   .rigby span {
     font-family: 'Press Start 2P', cursive;
     font-size: 20px; }
@@ -83,7 +89,10 @@ body {
 .benson {
   padding: 5px;
   background-image: url("../images/benson.png");
-  background-size: cover; }
+  background-size: cover;
+  cursor: pointer; }
+  .benson:hover {
+    background-color: rgba(180, 111, 155, 0.45); }
   .benson span {
     font-family: 'Press Start 2P', cursive;
     font-size: 20px; }
@@ -91,7 +100,10 @@ body {
 .pops {
   padding: 5px;
   background-image: url("../images/pops.png");
-  background-size: cover; }
+  background-size: cover;
+  cursor: pointer; }
+  .pops:hover {
+    background-color: rgba(180, 111, 155, 0.45); }
   .pops span {
     font-family: 'Press Start 2P', cursive;
     font-size: 20px; }
@@ -99,7 +111,10 @@ body {
 .skips {
   padding: 5px;
   background-image: url("../images/skips.png");
-  background-size: cover; }
+  background-size: cover;
+  cursor: pointer; }
+  .skips:hover {
+    background-color: rgba(180, 111, 155, 0.45); }
   .skips span {
     font-family: 'Press Start 2P', cursive;
     font-size: 20px; }
@@ -107,7 +122,10 @@ body {
 .muscleman {
   padding: 5px;
   background-image: url("../images/muscleman.png");
-  background-size: cover; }
+  background-size: cover;
+  cursor: pointer; }
+  .muscleman:hover {
+    background-color: rgba(180, 111, 155, 0.45); }
   .muscleman span {
     font-family: 'Press Start 2P', cursive;
     font-size: 20px; }
