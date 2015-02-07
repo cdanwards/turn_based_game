@@ -42,12 +42,20 @@ body {
     &:hover {
       color: #fff;
       background-color: #964175;
+    }
   }
-}
 }
 
 .start-screen-logo {
   display: block;
   flex: 1;
   margin-left: -50px;
+}
+
+.characterbox li {
+  list-style: none;
+
+  span {
+    color: white;
+  }
 }

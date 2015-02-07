@@ -41,4 +41,9 @@ body {
   flex: 1;
   margin-left: -50px; }
 
+.characterbox li {
+  list-style: none; }
+  .characterbox li span {
+    color: white; }
+
 /*# sourceMappingURL=main.css.map */

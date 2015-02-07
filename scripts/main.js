@@ -5,7 +5,7 @@ $(document).ready(function() {
 
 // Establishing variables
 var start = new Audio('sounds/yeah.mp3');
-var $characterOutput = $('.character-select');
+var $characterOutput = $('.character-screen');
 
 //Templates
 var renderCharacterTemplate = _.template($('.character-select').html());
@@ -16,8 +16,9 @@ $('.start').on('click', function(){
   $(".start-screen-container").hide();
 
   function renderTemplate(characterData){
-  $characterOutput.append(renderCharacterTemplate(characterData));
+    $characterOutput.append(renderCharacterTemplate(characterData));
   }
+  renderTemplate();
 });
 
 
