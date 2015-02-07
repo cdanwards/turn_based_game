@@ -25,7 +25,6 @@ var charactersObject = {
   }),
   rigby : new Character({
     name: 'Rigby',
-    shit: 'shit'
   }),
   benson : new Character({
     name: 'Benson'
