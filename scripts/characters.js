@@ -21,7 +21,7 @@ var Villain = function (options) {
 };
 
 
-var characters = {
+var charactersObject = {
   mordecaiCharacter : new Character({
     name: 'Mordecai'
   }),
