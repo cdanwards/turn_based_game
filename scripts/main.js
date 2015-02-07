@@ -22,6 +22,7 @@ var renderCharacterTemplate = _.template($('.character-select').html());
 
 $('.start').on('click', function(){
   start.play();
+  $(".theme-song").detach();
   $(".start-screen-container").hide();
 
   function renderTemplate(characterData){
