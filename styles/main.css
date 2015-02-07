@@ -116,6 +116,7 @@ body {
   padding: 5px;
   background-image: url("../images/pops.png");
   background-size: cover;
+  background-position: 25% 41%;
   cursor: pointer; }
   .pops:hover {
     background-color: rgba(180, 111, 155, 0.45); }
@@ -126,7 +127,7 @@ body {
 .pops-background {
   background-image: url("../images/pops.png");
   background-size: cover;
-  background-position: 10px 0px; }
+  background-position: 25% 41%; }
 
 .skips {
   padding: 5px;
@@ -147,6 +148,7 @@ body {
   padding: 5px;
   background-image: url("../images/muscleman.png");
   background-size: cover;
+  background-position: 1%;
   cursor: pointer; }
   .muscleman:hover {
     background-color: rgba(180, 111, 155, 0.45); }
@@ -156,7 +158,8 @@ body {
 
 .muscleman-background {
   background-image: url("../images/muscleman.png");
-  background-size: cover; }
+  background-size: cover;
+  background-position: 1%; }
 
 .player-box-container {
   display: flex;
@@ -165,21 +168,23 @@ body {
   /*   align-items: center;
   justify-content: center */
   margin: 0 auto;
-  width: 730px; }
+  width: 900px; }
 
 #selected-character {
   display: inline-block;
-  margin-top: 10px;
-  margin-left: 25px;
+  margin-top: 20px;
+  margin-left: 11px;
   padding: 5px;
   align-self: flex-start;
   background-color: green;
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
+  min-width: 300px;
+  min-height: 300px;
   border: 2px solid white; }
 
 .vs-character-select {
-  margin-top: 90px;
+  margin-top: 140px;
   margin-left: 53px;
   color: white;
   font-family: 'Press Start 2P', cursive;
@@ -188,16 +193,20 @@ body {
 .opponent-character {
   display: inline-block;
   margin-top: 10px;
-  margin-left: 41px;
+  margin-left: 38px;
   padding: 5px;
   align-self: flex-end;
   background-color: red;
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
+  min-width: 300px;
+  min-height: 300px;
   border: 2px solid white; }
 
 .fight-button {
-  margin: 40px 0 40px 500px;
+  display: block;
+  margin: 30px auto;
+  position: relative;
   color: #B46F9B;
   padding: .5em 1.75em;
   font-size: 50px;
