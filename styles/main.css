@@ -81,6 +81,10 @@ body {
     font-family: 'Press Start 2P', cursive;
     font-size: 20px; }
 
+.mordecai-background {
+  background-image: url("../images/mordecai.png");
+  background-size: cover; }
+
 .rigby {
   padding: 5px;
   background-image: url("../images/rigby.png");

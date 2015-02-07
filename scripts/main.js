@@ -13,6 +13,7 @@ var renderCharacterTemplate = _.template($('.character-select').html());
 
 $('.start').on('click', function(){
   start.play();
+  alert('clicked');
   $(".start-screen-container").hide();
 
   function renderTemplate(characterData){
@@ -25,7 +26,8 @@ $('.start').on('click', function(){
 // Character Select page
 
 $('.mordecai').on('click', function(){
-  $('.c-screen-player-box').addClass('mordecai');
+  alert('clicked');
+  $('.selected-character').addClass('mordecai');
 });
 
 
