@@ -42,12 +42,30 @@ $('.start').on('click', function(){
     $(".character-screen").hide();
     console.log(selectedCharacter);
 
+
     function renderTemplate(data){
       $fightOutput.append(renderFightTemplate(data));
     }
     renderTemplate();
+    $('.opponent-fight').addClass('.muscleman-background');
     $('.selected-character-fight').addClass(charClicked + '-background');
 
+    var randomEnemy = _.sample(villains);
+
+    // function ememyBackground(){
+    // if (randomEnemy == villains.death){
+    //     return $('.opponent-character-fight').addClass('.death');
+    // }
+    // // } else {
+    // //   (randomEnemy = villains.this);
+    // //   $('.opponent-character-fight').addClass('.summer-time');
+    // // }
+    //
+    //
+    // }
+
+
+    console.log(randomEnemy);
 
   });
 });
@@ -69,6 +87,31 @@ characterNames.forEach(function(char) {
         charClicked = char;
     });
 });
+
+//
+// Character Constructors
+//
+
+var Character = function (options) {
+  options = options || {};
+  _.defaults(options, {
+    attackUpper: 40,
+    attackLower: 10,
+    health: 100
+  });
+  _.extend(this, options);
+};
+
+var Villain = function (options) {
+  options = options || {};
+  _.defaults(options, {
+    attack: _.random(10, 45),
+    health: 100
+  });
+  _.extend(this, options);
+};
+
+
 
 });
 

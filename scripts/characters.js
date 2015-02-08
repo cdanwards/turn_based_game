@@ -19,6 +19,8 @@ var Villain = function (options) {
   _.extend(this, options);
 };
 
+
+
 var charactersObject = {
   mordecai : new Character({
     name: 'Mordecai'
@@ -40,7 +42,8 @@ var charactersObject = {
   })
 };
 
-var villans = {
+
+var villains = {
   death : new Villain({
     name: 'Death',
   }),
@@ -57,10 +60,10 @@ var villans = {
    name: 'Summertime Song'
   }),
   theMasterPrankCaller : new Villain({
-    name: 'The Master Prank Caller'
+    name: 'The Master Prank Caller',
   })
 };
 
-Character.prototype.attack = function(i) {
-  i.health -= strength;
-};
+// Character.prototype.attack = function(i) {
+//   i.health -= strength;
+// };

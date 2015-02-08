@@ -48,7 +48,7 @@ body {
   margin-left: -50px;
 }
 
-.choose-figher {
+.choose-fighter {
   margin: 20px 0;
   text-align: center;
   color: white;
@@ -305,7 +305,7 @@ justify-content: center */;
   border: 2px solid white;
 }
 
-.opponent-character-fight {
+.opponent-fight {
   display: inline-block;
   padding: 5px;
   align-self: flex-end;
@@ -315,4 +315,14 @@ justify-content: center */;
   min-width: 300px;
   min-height: 300px;
   border: 2px solid white;
+}
+
+.summer-time {
+  background-image: url('../images/summertime.png');
+  background-size: cover;
+}
+
+.death {
+  background-image: url('../images/death.png');
+  background-size: cover;
 }
