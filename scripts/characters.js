@@ -14,7 +14,7 @@ var Villain = function (options) {
   _.defaults(options, {
     attackUpper: 40,
     attackLower: 10,
-    health: 200
+    health: 100
   });
   _.extend(this, options);
 };
@@ -43,27 +43,22 @@ var charactersObject = {
 
 var villans = {
   death : new Villain({
-    name: 'Death',
+    name: 'Death'
   }),
   thomas : new Villain({
-    name: 'Thomas',
-    image: deathImage
+    name: 'Thomas'
   }),
   garrettBobbyFerguson: new Villain({
-    name: 'Garrett Bobby Ferguson',
-    image: deathImage
+    name: 'Garrett Bobby Ferguson'
   }),
   iacedromAndYbigr : new Villain({
-    name: 'Iacedrom And Ybigr',
-    image: deathImage
+    name: 'Iacedrom And Ybigr'
   }),
   summertimeSong : new Villain({
-   name: 'Summertime Song',
-   image: deathImage
+   name: 'Summertime Song'
   }),
   theMasterPrankCaller : new Villain({
     name: 'The Master Prank Caller',
-    image: deathImage
   })
 };
 
