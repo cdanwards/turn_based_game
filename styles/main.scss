@@ -124,9 +124,7 @@ body {
 }
 
 .rigby-background {
-  background-image: url('../images/rigby.png');
-  background-size: cover;
-  background-position: center center;
+  background: url('../images/rigby.png') no-repeat center;
 }
 
 .benson {
@@ -153,7 +151,7 @@ body {
 
 .pops {
   padding: 5px;
-  background-image: url('../images/pops.png');
+  background: url('../images/pops.png') no-repeat center;
   background-size: cover;
   background-position: 25% 41%;
   cursor: pointer;
@@ -170,9 +168,7 @@ body {
 }
 
 .pops-background {
-  background-image: url('../images/pops.png');
-  background-size: cover;
-  background-position: 25% 41%;
+  background: url('../images/pops.png') no-repeat center;
 }
 
 .skips {
@@ -199,9 +195,7 @@ body {
 
 .muscleman {
   padding: 5px;
-  background-image: url('../images/muscleman.png');
-  background-size: cover;
-  background-position: 1%;
+  background: url('../images/muscleman.png') no-repeat center;
   cursor: pointer;
 
   &:hover {
@@ -216,9 +210,7 @@ body {
 }
 
 .muscleman-background {
-  background-image: url('../images/muscleman.png');
-  background-size: cover;
-  background-position: 1%;
+  background: url('../images/muscleman.png') no-repeat center;
 }
 
 .player-box-container {
@@ -323,13 +315,11 @@ justify-content: center */;
 }
 
 .death {
-  background-image: url('../images/death.png');
-  background-size: cover;
+  background: url('../images/death.png') no-repeat center;
 }
 
 .garrett {
-  background-image: url('../images/garrettbobbyferguson.png');
-  background-size: cover;
+  background: url('../images/garrettbobbyferguson.png') no-repeat center;
 }
 
 .iacedrom-and-ybgir {
@@ -343,6 +333,5 @@ justify-content: center */;
 }
 
 .tmpc {
-  background-image: url('../images/tmpc.png');
-  background-size: cover;
+  background: url('../images/tmpc.png') no-repeat center;
 }

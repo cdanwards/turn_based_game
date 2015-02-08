@@ -46,22 +46,28 @@ var charactersObject = {
 
 var villains = {
   death : new Villain({
-    name: 'Death'
+    name: 'Death',
+    class: 'death'
   }),
   thomas : new Villain({
-    name: 'Thomas'
+    name: 'Thomas',
+    class: 'thomas'
   }),
   garrettBobbyFerguson: new Villain({
-    name: 'Garrett Bobby Ferguson'
+    name: 'Garrett Bobby Ferguson',
+    class: 'garrett'
   }),
   iacedromAndYbigr : new Villain({
-    name: 'Iacedrom And Ybigr'
+    name: 'Iacedrom And Ybigr',
+    class: 'iacedrom-and-ybgir'
   }),
   summertimeSong : new Villain({
-   name: 'Summertime Song'
+    name: 'Summertime Song',
+    class: 'summer-time'
   }),
   theMasterPrankCaller : new Villain({
     name: 'The Master Prank Caller',
+    class: 'tmpc'
   })
 };
 

@@ -54,28 +54,18 @@ $('#fight-button').on('click',function(){
     $('.selected-character-fight').addClass(charClicked + '-background');
 
     var randomEnemy = _.sample(villains);
+    var enemy = randomEnemy;
+    var enemyClass = randomEnemy.class;
 
-    // Only first statement works when event listener is triggered 
 
-    if (randomEnemy == villains.death) {
-      $('#opponent-fight').addClass('death');
+    // Only first statement works when event listener is triggered
 
-    } else if (randomEnemy == villains.summertimeSong) {
-      $('.opponent-fight').addClass('summer-time');
-
-    } else if (randomEnemy == villains.garrettBobbyFerguson) {
-      $('.opponent-fight').addClass('garrett');
-
-    } else if (randomEnemy == villains.iacedromAndYbigr) {
-      $('.opponent-fight').addClass('iacedrom-and-ybgir');
-
-    } else if (randomEnemy == villains.thomas) {
-      $('.opponent-fight').addClass('thomas');
-
-    } else {
-      $('.opponent-fight').addClass('tmpc');
+    if (enemyClass == enemyClass) {
+      $('#opponent-fight').addClass(enemyClass);
     }
 
+    console.log(enemy);
+    console.log(enemyClass);
     console.log(randomEnemy);
 
   });
