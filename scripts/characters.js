@@ -14,7 +14,7 @@ var Villain = function (options) {
   _.defaults(options, {
     attackUpper: 40,
     attackLower: 10,
-    health: 100
+    health: 200
   });
   _.extend(this, options);
 };
@@ -40,27 +40,33 @@ var charactersObject = {
   })
 };
 
+
 var villans = {
   death : new Villain({
-    name: 'Death'
+    name: 'Death',
   }),
   thomas : new Villain({
-    name: 'Thomas'
+    name: 'Thomas',
+    image: deathImage
   }),
   garrettBobbyFerguson: new Villain({
-    name: 'Garrett Bobby Ferguson'
+    name: 'Garrett Bobby Ferguson',
+    image: deathImage
   }),
   iacedromAndYbigr : new Villain({
-    name: 'Iacedrom And Ybigr'
+    name: 'Iacedrom And Ybigr',
+    image: deathImage
   }),
   summertimeSong : new Villain({
-   name: 'Summertime Song'
+   name: 'Summertime Song',
+   image: deathImage
   }),
   theMasterPrankCaller : new Villain({
-    name: 'The Master Prank Caller'
+    name: 'The Master Prank Caller',
+    image: deathImage
   })
 };
 
-Character.prototype.attack = function(i) {
-  i.health -= strength;
-};
+// Character.prototype.attack = function(i) {
+//   i.health -= strength;
+// };
