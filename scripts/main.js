@@ -42,26 +42,30 @@ $('.start').on('click', function(){
     $(".character-screen").hide();
     console.log(selectedCharacter);
 
-    var randomEnemy = _.(villains);
 
-    if (randomEnemy = villains.death) {
-      $('.opponent-character-fight').addClass('.death');
-    } else {
-      (randomEnemy = villains.summertimeSong)
-      $('.opponent-character-fight').addClass('.summer-time');
-    };
-
-
-
-
-
-    console.log(randomEnemy);
     function renderTemplate(data){
       $fightOutput.append(renderFightTemplate(data));
     }
     renderTemplate();
+    $('.opponent-fight').addClass('.muscleman-background');
     $('.selected-character-fight').addClass(charClicked + '-background');
 
+    var randomEnemy = _.sample(villains);
+
+    // function ememyBackground(){
+    // if (randomEnemy == villains.death){
+    //     return $('.opponent-character-fight').addClass('.death');
+    // }
+    // // } else {
+    // //   (randomEnemy = villains.this);
+    // //   $('.opponent-character-fight').addClass('.summer-time');
+    // // }
+    //
+    //
+    // }
+
+
+    console.log(randomEnemy);
 
   });
 });
