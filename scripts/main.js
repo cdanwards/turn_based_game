@@ -69,9 +69,9 @@ $fightOutput.on('click', ".punchies-button", function(){
   selectedCharacter.health -= enemyAttack;
 
   if (randomEnemy.health <= 0) {
-    alert('You won!');
+    alert('You rock at punchies!');
   } else if (selectedCharacter.health < 0) {
-    alert('You lost!');
+    alert("You're not so great at punchies...LOSER!");
   }
 
   console.log('Enemies health: ' + randomEnemy.health);
