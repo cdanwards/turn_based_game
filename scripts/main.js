@@ -42,8 +42,14 @@ $('.start').on('click', function(){
     $(".character-screen").hide();
     console.log(selectedCharacter);
 
-    var randomEnemy = _.sample(villans);
+    var randomEnemy = _.(villains);
 
+    if (randomEnemy = villains.death) {
+      $('.opponent-character-fight').addClass('.death');
+    } else {
+      (randomEnemy = villains.summertimeSong)
+      $('.opponent-character-fight').addClass('.summer-time');
+    };
 
 
 

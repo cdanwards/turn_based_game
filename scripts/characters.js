@@ -41,7 +41,7 @@ var charactersObject = {
 };
 
 
-var villans = {
+var villains = {
   death : new Villain({
     name: 'Death'
   }),
