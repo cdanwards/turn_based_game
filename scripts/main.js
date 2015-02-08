@@ -61,6 +61,10 @@ $('#fight-button').on('click',function(){
 });
 
 
+$fightOutput.on('click', ".punchies-button", function(){
+  console.log(selectedCharacter.attackLower);
+});
+
 var characterNames = ["mordecai", "rigby", "benson", "pops", "skips", "muscleman"];
 var playerFight;
 characterNames.forEach(function(char) {
