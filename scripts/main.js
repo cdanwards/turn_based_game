@@ -45,27 +45,16 @@ $('#fight-button').on('click',function(){
     $(".character-screen").hide();
     console.log(selectedCharacter);
 
-
     function renderTemplate(data){
       $fightOutput.append(renderFightTemplate(data));
     }
     renderTemplate();
-    // $('#opponent-fight').addClass('summer-time');
     $('.selected-character-fight').addClass(charClicked + '-background');
 
     var randomEnemy = _.sample(villains);
-    var enemy = randomEnemy;
     var enemyClass = randomEnemy.class;
+    $('#opponent-fight').addClass(enemyClass);
 
-
-    // Only first statement works when event listener is triggered
-
-    if (enemyClass == enemyClass) {
-      $('#opponent-fight').addClass(enemyClass);
-    }
-
-    console.log(enemy);
-    console.log(enemyClass);
     console.log(randomEnemy);
 
   });
