@@ -62,7 +62,11 @@ $('#fight-button').on('click',function(){
 
 
 $fightOutput.on('click', ".punchies-button", function(){
-  console.log(selectedCharacter.attackLower);
+  var attack = (_.random(selectedCharacter.attackLower, selectedCharacter.attackUpper));
+  var enemyHealth = (randomEnemy.health);
+  console.log(enemyHealth);
+  console.log('Attack: ' + attack);
+  console.log('Enemies health: ' + enemyHealth);
 });
 
 var characterNames = ["mordecai", "rigby", "benson", "pops", "skips", "muscleman"];
