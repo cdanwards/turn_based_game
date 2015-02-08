@@ -44,7 +44,7 @@ $('.start').on('click', function(){
 
     var randomEnemy = _.sample(villans);
 
-    
+
 
 
 
@@ -99,64 +99,6 @@ var Villain = function (options) {
     health: 100
   });
   _.extend(this, options);
-};
-
-
-var charactersObject = {
-  mordecai : new Character({
-    name: 'Mordecai'
-  }),
-  rigby : new Character({
-    name: 'Rigby',
-    shit: 'shit'
-  }),
-  benson : new Character({
-    name: 'Benson'
-  }),
-  pops : new Character({
-    name: 'pops'
-  }),
-  skips : new Character({
-    name: 'Skips'
-  }),
-  muscleman : new Character({
-    name: 'Muscleman'
-  }),
-};
-
-
-var deathVillain = new Villain({
-  name: 'Death'
-
-});
-
-var thomasVillain = new Villain({
-  name: 'Thomas'
-
-});
-
-var garrettBobbyFergusonVillain = new Villain({
-  name: 'Garrett Bobby Ferguson'
-
-});
-
-var iacedromAndYbigrVillain = new Villain({
-  name: 'Iacedrom And Ybigr'
-
-});
-
-var summertimeSongVillain = new Villain({
-  name: 'Summertime Song'
-
-});
-
-var theMasterPrankCallerVillain = new Villain({
-  name: 'The Master Prank Caller'
-
-});
-
-Character.prototype.attack = function(i) {
-  i.health -= strength;
 };
 
 
