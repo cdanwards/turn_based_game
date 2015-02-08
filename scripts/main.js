@@ -63,13 +63,20 @@ $('#fight-button').on('click',function(){
 
 $fightOutput.on('click', ".punchies-button", function(){
   var attack = (_.random(selectedCharacter.attackLower, selectedCharacter.attackUpper));
-  var enemyHealth = randomEnemy.health -= attack;
+  randomEnemy.health -= attack;
 
+  var enemyAttack = (_.random(randomEnemy.attackLower, randomEnemy.attackUpper));
+  selectedCharacter.health -= enemyAttack;
 
-  console.log(enemyHealth);
-  // console.log('Attack: ' + attack);
-  // console.log('Enemies health: ' + enemyHealth);
-  // console.log(enemyHealth - attack);
+  if (randomEnemy.health <= 0) {
+    alert('You won!');
+  } else if (selectedCharacter.health < 0) {
+    alert('You lost!');
+  }
+
+  console.log('Enemies health: ' + randomEnemy.health);
+  console.log('Your health: ' + selectedCharacter.health);
+
 });
 
 var characterNames = ["mordecai", "rigby", "benson", "pops", "skips", "muscleman"];
