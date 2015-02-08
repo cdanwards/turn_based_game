@@ -67,7 +67,3 @@ var villains = {
     class: 'tmpc'
   })
 };
-
-// Character.prototype.attack = function(i) {
-//   i.health -= strength;
-// };
