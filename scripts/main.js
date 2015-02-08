@@ -3,7 +3,8 @@
 
 $(document).ready(function() {
 
-// Sounds
+//Variables
+
 var sounds = {
   start : new Audio('sounds/yeah.mp3'),
   mordecai : new Audio('sounds/mordecai.mp3'),
@@ -14,9 +15,9 @@ var sounds = {
   muscleman : new Audio('sounds/muscleman.mp3')
 };
 
-// Selected character that is stored when a character is selected
 var selectedCharacter;
 var charClicked;
+var randomEnemy;
 
 // Character select div
 var $characterOutput = $('.character-screen');
@@ -37,8 +38,10 @@ $('.start').on('click', function(){
   }
   renderTemplate();
 
-  $('#fight-button').on('click',function(){
-      selectedCharacter = charactersObject[charClicked];
+
+
+$('#fight-button').on('click',function(){
+  selectedCharacter = charactersObject[charClicked];
     $(".character-screen").hide();
     console.log(selectedCharacter);
 
@@ -50,41 +53,43 @@ $('.start').on('click', function(){
     $('.opponent-fight').addClass('.muscleman-background');
     $('.selected-character-fight').addClass(charClicked + '-background');
 
-    var randomEnemy = _.sample(villains);
 
-    // function ememyBackground(){
-    // if (randomEnemy == villains.death){
-    //     return $('.opponent-character-fight').addClass('.death');
-    // }
-    // // } else {
-    // //   (randomEnemy = villains.this);
-    // //   $('.opponent-character-fight').addClass('.summer-time');
-    // // }
-    //
-    //
-    // }
-
+    randomEnemy = _.sample(villains);
+    var enemyClass = randomEnemy.class;
+    $('#opponent-fight').addClass(enemyClass);
 
     console.log(randomEnemy);
 
   });
 });
 
-// $characterOutput.on('click', '.mordecai', function() {
-//   // alert('clicked');
-//   $('.selected-character').addClass('mordecai-background');
-// });
-//
+
+$fightOutput.on('click', ".punchies-button", function(){
+  var attack = (_.random(selectedCharacter.attackLower, selectedCharacter.attackUpper));
+  randomEnemy.health -= attack;
+
+  var enemyAttack = (_.random(randomEnemy.attackLower, randomEnemy.attackUpper));
+  selectedCharacter.health -= enemyAttack;
+
+  if (randomEnemy.health <= 0) {
+    alert('You rock at punchies!');
+  } else if (selectedCharacter.health < 0) {
+    alert("You're not so great at punchies...LOSER!");
+  }
+
+  console.log('Enemies health: ' + randomEnemy.health);
+  console.log('Your health: ' + selectedCharacter.health);
+
+});
 
 var characterNames = ["mordecai", "rigby", "benson", "pops", "skips", "muscleman"];
 var playerFight;
 characterNames.forEach(function(char) {
-    $characterOutput.on('click', '.'+char, function(e) {
-        // alert('click on ' + char + '!');
-        $('#selected-character').removeClass().addClass(char + '-background').attr('data-value', char + 'Character');
-        playerFight =  $('.selected-character-fight').addClass(char + '-background').attr('value', char + 'Character');
-        sounds[char].play();
-        charClicked = char;
+  $characterOutput.on('click', '.'+char, function(e) {
+    $('#selected-character').removeClass().addClass(char + '-background').attr('data-value', char + 'Character');
+      playerFight =  $('.selected-character-fight').addClass(char + '-background').attr('value', char + 'Character');
+      sounds[char].play();
+      charClicked = char;
     });
 });
 
