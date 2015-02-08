@@ -42,13 +42,13 @@ var charactersObject = {
 
 var villans = {
   death : new Villain({
-    name: 'Death'
+    name: 'Death',
   }),
   thomas : new Villain({
-    name: 'Thomas'
+    name: 'Thomas',
   }),
   garrettBobbyFerguson: new Villain({
-    name: 'Garrett Bobby Ferguson'
+    name: 'Garrett Bobby Ferguson',
   }),
   iacedromAndYbigr : new Villain({
     name: 'Iacedrom And Ybigr'
