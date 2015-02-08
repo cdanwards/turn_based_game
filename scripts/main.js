@@ -42,6 +42,14 @@ $('.start').on('click', function(){
     $(".character-screen").hide();
     console.log(selectedCharacter);
 
+    var randomEnemy = _.sample(villans);
+
+    
+
+
+
+
+    console.log(randomEnemy);
     function renderTemplate(data){
       $fightOutput.append(renderFightTemplate(data));
     }
