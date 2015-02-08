@@ -40,6 +40,9 @@ var charactersObject = {
   })
 };
 
+// var villains = {
+//   death: 'HELLLO'
+// };
 
 var villains = {
   death : new Villain({

@@ -3,7 +3,8 @@
 
 $(document).ready(function() {
 
-// Sounds
+//Variables
+
 var sounds = {
   start : new Audio('sounds/yeah.mp3'),
   mordecai : new Audio('sounds/mordecai.mp3'),
@@ -14,9 +15,9 @@ var sounds = {
   muscleman : new Audio('sounds/muscleman.mp3')
 };
 
-// Selected character that is stored when a character is selected
 var selectedCharacter;
 var charClicked;
+var randomEnemy;
 
 // Character select div
 var $characterOutput = $('.character-screen');
@@ -37,8 +38,10 @@ $('.start').on('click', function(){
   }
   renderTemplate();
 
-  $('#fight-button').on('click',function(){
-      selectedCharacter = charactersObject[charClicked];
+
+
+$('#fight-button').on('click',function(){
+  selectedCharacter = charactersObject[charClicked];
     $(".character-screen").hide();
     console.log(selectedCharacter);
 
@@ -47,71 +50,48 @@ $('.start').on('click', function(){
       $fightOutput.append(renderFightTemplate(data));
     }
     renderTemplate();
-    $('.opponent-fight').addClass('.muscleman-background');
+    // $('#opponent-fight').addClass('summer-time');
     $('.selected-character-fight').addClass(charClicked + '-background');
 
     var randomEnemy = _.sample(villains);
 
-    // function ememyBackground(){
-    // if (randomEnemy == villains.death){
-    //     return $('.opponent-character-fight').addClass('.death');
-    // }
-    // // } else {
-    // //   (randomEnemy = villains.this);
-    // //   $('.opponent-character-fight').addClass('.summer-time');
-    // // }
-    //
-    //
-    // }
+    // Only first statement works when event listener is triggered 
 
+    if (randomEnemy == villains.death) {
+      $('#opponent-fight').addClass('death');
+
+    } else if (randomEnemy == villains.summertimeSong) {
+      $('.opponent-fight').addClass('summer-time');
+
+    } else if (randomEnemy == villains.garrettBobbyFerguson) {
+      $('.opponent-fight').addClass('garrett');
+
+    } else if (randomEnemy == villains.iacedromAndYbigr) {
+      $('.opponent-fight').addClass('iacedrom-and-ybgir');
+
+    } else if (randomEnemy == villains.thomas) {
+      $('.opponent-fight').addClass('thomas');
+
+    } else {
+      $('.opponent-fight').addClass('tmpc');
+    }
 
     console.log(randomEnemy);
 
   });
 });
 
-// $characterOutput.on('click', '.mordecai', function() {
-//   // alert('clicked');
-//   $('.selected-character').addClass('mordecai-background');
-// });
-//
 
 var characterNames = ["mordecai", "rigby", "benson", "pops", "skips", "muscleman"];
 var playerFight;
 characterNames.forEach(function(char) {
-    $characterOutput.on('click', '.'+char, function(e) {
-        // alert('click on ' + char + '!');
-        $('#selected-character').removeClass().addClass(char + '-background').attr('data-value', char + 'Character');
-        playerFight =  $('.selected-character-fight').addClass(char + '-background').attr('value', char + 'Character');
-        sounds[char].play();
-        charClicked = char;
+  $characterOutput.on('click', '.'+char, function(e) {
+    $('#selected-character').removeClass().addClass(char + '-background').attr('data-value', char + 'Character');
+      playerFight =  $('.selected-character-fight').addClass(char + '-background').attr('value', char + 'Character');
+      sounds[char].play();
+      charClicked = char;
     });
 });
-
-//
-// Character Constructors
-//
-
-var Character = function (options) {
-  options = options || {};
-  _.defaults(options, {
-    attackUpper: 40,
-    attackLower: 10,
-    health: 100
-  });
-  _.extend(this, options);
-};
-
-var Villain = function (options) {
-  options = options || {};
-  _.defaults(options, {
-    attack: _.random(10, 45),
-    health: 100
-  });
-  _.extend(this, options);
-};
-
-
 
 });
 

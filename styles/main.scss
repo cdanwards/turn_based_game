@@ -305,7 +305,7 @@ justify-content: center */;
   border: 2px solid white;
 }
 
-.opponent-fight {
+#opponent-fight {
   display: inline-block;
   padding: 5px;
   align-self: flex-end;
@@ -324,5 +324,25 @@ justify-content: center */;
 
 .death {
   background-image: url('../images/death.png');
+  background-size: cover;
+}
+
+.garrett {
+  background-image: url('../images/garrettbobbyferguson.png');
+  background-size: cover;
+}
+
+.iacedrom-and-ybgir {
+  background-image: url('../images/iacedromandybgir.png');
+  background-size: cover;
+}
+
+.thomas {
+  background-image: url('../images/thomas.png');
+  background-size: cover;
+}
+
+.tmpc {
+  background-image: url('../images/tmpc.png');
   background-size: cover;
 }
