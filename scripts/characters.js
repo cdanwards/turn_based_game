@@ -2,8 +2,8 @@
 var Character = function (options) {
   options = options || {};
   _.defaults(options, {
-    attackUpper: 40,
-    attackLower: 10,
+    attackUpper: 20,
+    attackLower: 5,
     health: 100
   });
   _.extend(this, options);
@@ -12,8 +12,8 @@ var Character = function (options) {
 var Villain = function (options) {
   options = options || {};
   _.defaults(options, {
-    attackUpper: 40,
-    attackLower: 10,
+    attackUpper: 20,
+    attackLower: 5,
     health: 100
   });
   _.extend(this, options);
@@ -40,9 +40,6 @@ var charactersObject = {
   })
 };
 
-// var villains = {
-//   death: 'HELLLO'
-// };
 
 var villains = {
   death : new Villain({

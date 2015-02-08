@@ -51,7 +51,7 @@ $('#fight-button').on('click',function(){
     renderTemplate();
     $('.selected-character-fight').addClass(charClicked + '-background');
 
-    var randomEnemy = _.sample(villains);
+    randomEnemy = _.sample(villains);
     var enemyClass = randomEnemy.class;
     $('#opponent-fight').addClass(enemyClass);
 
@@ -63,10 +63,13 @@ $('#fight-button').on('click',function(){
 
 $fightOutput.on('click', ".punchies-button", function(){
   var attack = (_.random(selectedCharacter.attackLower, selectedCharacter.attackUpper));
-  var enemyHealth = (randomEnemy.health);
+  var enemyHealth = randomEnemy.health -= attack;
+
+
   console.log(enemyHealth);
-  console.log('Attack: ' + attack);
-  console.log('Enemies health: ' + enemyHealth);
+  // console.log('Attack: ' + attack);
+  // console.log('Enemies health: ' + enemyHealth);
+  // console.log(enemyHealth - attack);
 });
 
 var characterNames = ["mordecai", "rigby", "benson", "pops", "skips", "muscleman"];
