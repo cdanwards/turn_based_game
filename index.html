@@ -70,12 +70,13 @@
 
 <script type="text/template" class="fight-screen-container">
 
+<progress id='character-health' max="100" value="100"></progress>
+<progress id='opponent-health' max="100" value="100"></progress>
+
     <div class="fight-box-container">
       <div class="selected-character-fight"></div>
-      <progress id='character-health' max="100" value="100"></progress>
       <span class="vs-character-select">VS</span>
       <div id="opponent-fight"></div>
-      <progress id='opponent-health' max="100" value="100"></progress>
     </div>
     <h2 class="game-over hidden">GAME OVER</h2>
     <button class="punchies-button">PUNCHIES</button>

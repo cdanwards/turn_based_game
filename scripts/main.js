@@ -62,6 +62,7 @@ $('#fight-button').on('click',function(){
 
 
 $fightOutput.on('click', ".punchies-button", function(){
+
   var attack = (_.random(selectedCharacter.attackLower, selectedCharacter.attackUpper));
   randomEnemy.health -= attack;
 
