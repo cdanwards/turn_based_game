@@ -103,10 +103,10 @@ $fightOutput.on('click', ".punchies-button", function(){
 
   if (randomEnemy.health <= 0) {
     $(".you-win").addClass('hidden');
-    sounds.lose.play();
+    sounds.win.play();
   } else if ( selectedCharacter.health <= 0) {
     $(".you-lose").addClass('hidden');
-    sounds.win.play();
+    sounds.lose.play();
   }
 
   console.log('Enemies health: ' + randomEnemy.health);
