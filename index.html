@@ -34,7 +34,7 @@
 
 <script type="text/template" class="character-select">
 
-<h1 class= "choose-fighter">Choose Your Fighter!</h1>
+<h1 class= "title">Choose Your Fighter!</h1>
 
   <div class="character-select-screen-container">
 
@@ -71,6 +71,8 @@
 
 <script type="text/template" class="fight-screen-container">
 
+  <h1 class= "title">Let's do this!</h1>
+
   <div class="health-bars">
     <progress id='character-health' max="100" value="100"></progress>
     <span class="health">HEALTH</span>
@@ -90,12 +92,12 @@
 
 <script type="text/template" class="game-over-screen-container">
 
-  <div class="gameOver">
+  <div class="game-over-container">
     <h2 class="game-over">GAME OVER</h2>
-    <h2 class="you-win">YOU WIN PUNCHIES</h2>
-    <h2 class="you-lose">YOU'RE NOT SO GREAT AT PUNCHIES</h2>
+    <h2 class="you-win game-over-status">YOU WIN PUNCHIES</h2>
+    <h2 class="you-lose game-over-status">YOU'RE NOT SO GREAT AT PUNCHIES</h2>
   </div>
-  <button class="reset-button hidden">RESET</button>
+  <button class="reset-button">RESET</button>
 
 </script>
 

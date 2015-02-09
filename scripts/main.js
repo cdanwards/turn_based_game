@@ -12,20 +12,22 @@ var sounds = {
   benson : new Audio('sounds/benson.mp3'),
   pops : new Audio('sounds/pops.mp3'),
   skips : new Audio('sounds/skips.mp3'),
-  muscleman : new Audio('sounds/muscleman.mp3')
+  muscleman : new Audio('sounds/muscleman.mp3'),
+  fightSong : new Audio('sounds/battletheme.mp3'),
+  punch : new Audio('sounds/punchies.wav'),
+  win : new Audio('sounds/win.mp3'),
+  lose : new Audio('sounds/lose.mp3')
 };
-
 var selectedCharacter;
 var charClicked;
 var randomEnemy;
 
-// Character select div
+
+//Templates
 var $characterOutput = $('.character-screen');
 var $fightOutput = $('.fight-screen');
 var $gameOverOutPut = $('.game-over-screen');
 
-
-//Template
 var renderCharacterTemplate = _.template($('.character-select').html());
 var renderFightTemplate = _.template($('.fight-screen-container').html());
 var renderGameOverTemplate = _.template($('.game-over-screen-container').html());
@@ -41,8 +43,6 @@ $('.start').on('click', function(){
   }
   renderTemplate();
 
-
-
 $('#fight-button').on('click',function(){
   selectedCharacter = charactersObject[charClicked];
     $(".character-screen").hide();
@@ -52,44 +52,18 @@ $('#fight-button').on('click',function(){
       $fightOutput.append(renderFightTemplate(data));
     }
     renderTemplate();
+
     $('.selected-character-fight').addClass(charClicked + '-background');
 
     randomEnemy = _.sample(villains);
     var enemyClass = randomEnemy.class;
     $('#opponent-fight').addClass(enemyClass);
 
+    sounds.fightSong.play();
+
     console.log(randomEnemy);
 
   });
-});
-
-
-$fightOutput.on('click', ".punchies-button", function(){
-
-  var attack = (_.random(selectedCharacter.attackLower, selectedCharacter.attackUpper));
-  randomEnemy.health -= attack;
-
-  var enemyAttack = (_.random(randomEnemy.attackLower, randomEnemy.attackUpper));
-  selectedCharacter.health -= enemyAttack;
-
-  $('#character-health').attr('value', selectedCharacter.health);
-  $('#opponent-health').attr('value', randomEnemy.health);
-
-  if (randomEnemy.health <= 0 || selectedCharacter.health < 0) {
-    $(".fight-box-container").hide();
-    $(".health-bars").hide();
-    $(".punchies-button-container").hide();
-    $gameOverOutPut.append(renderGameOverTemplate);
-  }
-  if (randomEnemy.health <= 0) {
-    $(".you-win").removeClass('hidden')
-  } else if ( selectedCharacter.health <0) {
-    $(".you-lose").removeClass('hidden');
-  }
-
-  console.log('Enemies health: ' + randomEnemy.health);
-  console.log('Your health: ' + selectedCharacter.health);
-
 });
 
 var characterNames = ["mordecai", "rigby", "benson", "pops", "skips", "muscleman"];
@@ -101,6 +75,47 @@ characterNames.forEach(function(char) {
       sounds[char].play();
       charClicked = char;
     });
+});
+
+
+//Fight Screen
+$fightOutput.on('click', ".punchies-button", function(){
+
+  sounds.punch.play();
+
+  var attack = (_.random(selectedCharacter.attackLower, selectedCharacter.attackUpper));
+  randomEnemy.health -= attack;
+
+  var enemyAttack = (_.random(randomEnemy.attackLower, randomEnemy.attackUpper));
+  selectedCharacter.health -= enemyAttack;
+
+  $('#character-health').attr('value', selectedCharacter.health);
+  $('#opponent-health').attr('value', randomEnemy.health);
+
+  if (randomEnemy.health <= 0 || selectedCharacter.health < 0) {
+    $(".title").hide();
+    $(".fight-box-container").hide();
+    $(".health-bars").hide();
+    $(".punchies-button-container").hide();
+    sounds.fightSong.pause();
+    $gameOverOutPut.append(renderGameOverTemplate);
+  }
+
+  if (randomEnemy.health <= 0) {
+    $(".you-win").addClass('hidden');
+    sounds.lose.play();
+  } else if ( selectedCharacter.health <= 0) {
+    $(".you-lose").addClass('hidden');
+    sounds.win.play();
+  }
+
+  console.log('Enemies health: ' + randomEnemy.health);
+  console.log('Your health: ' + selectedCharacter.health);
+
+});
+
+$gameOverOutPut.on('click', ".reset-button", function(){
+  location.reload();
 });
 
 });

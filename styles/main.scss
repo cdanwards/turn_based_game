@@ -30,7 +30,7 @@ body {
     margin-top: 80px;
     color: #B46F9B;
     padding: .5em 1.75em;
-    font-size: 50px;
+    font-size: 40px;
     font-family: 'Press Start 2P', cursive;
     border: 1px solid rgba(147, 128, 108, .25);
     background-color: #6E0047;
@@ -42,18 +42,19 @@ body {
   }
 }
 
+
 .start-screen-logo {
   display: block;
   flex: 1;
   margin-left: -50px;
 }
 
-.choose-fighter {
+.title {
   margin: 20px 0;
   text-align: center;
   color: white;
   font-family: 'Press Start 2P', cursive;
-  font-size: 20px;
+  font-size: 30px;
 }
 
 .characterbox li {
@@ -264,7 +265,7 @@ justify-content: center */;
   position: relative;
   color: #B46F9B;
   padding: .5em 1.75em;
-  font-size: 50px;
+  font-size: 40px;
   font-family: 'Press Start 2P', cursive;
   border: 1px solid rgba(147, 128, 108, .25);
   background-color: #6E0047;
@@ -411,22 +412,6 @@ progress[value]::-webkit-progress-value {
   }
 }
 
-.reset-button {
-  display: block;
-  margin: 0 auto;
-  margin-top: 200px;
-  color: #B46F9B;
-  padding: .2em .5em;
-  font-size: 40px;
-  font-family: 'Press Start 2P', cursive;
-  border: 1px solid rgba(147, 128, 108, .25);
-  background-color: #6E0047;
-
-  &:hover {
-    color: #fff;
-    background-color: #964175;
-  }
-}
 
 .hidden {
   display: none;
@@ -437,47 +422,46 @@ progress[value]::-webkit-progress-value {
 
 .game-over-container{
   display: flex;
-  padding: 0;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-}
-
-
-/* .you-win {
-  display: inline-block;
-  margin: 0 auto;
-  margin-top: 50px;
-  position: relative;
-  color: #B46F9B;
-  font-size: 40px;
-  font-family: 'Press Start 2P', cursive;
-  border: 1px solid rgba(147, 128, 108, .25);
-  background-color: #6E0047;
-}
-
-.you-lose {
-  display: inline-block;
-  margin: 0 auto;
-  margin-top: 50px;
-  position: relative;
-  color: #B46F9B;
-  font-size: 40px;
-  font-family: 'Press Start 2P', cursive;
-  border: 1px solid rgba(147, 128, 108, .25);
-  background-color: #6E0047;
+  width: 780px;
 }
 
 .game-over {
-  top: 20;
-  display: inline-block;
-  text-align: center;
-  font-size: 80px;
-  z-index: 1;
-  line-height: 1.5;
-  font-family: 'Press Start 2P', cursive;
-  color: white;
+  margin-top: 100px;
   background-color: red;
+  padding: 9px 10px 0 21px;
+  text-align: center;
+  line-height: 1.5;
+  color: white;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 80px;
 }
- */
+
+.game-over-status {
+  margin: 0 auto;
+  margin-top: 40px;
+  text-align: center;
+  color: #b46f9b;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 40px;
+}
+
+.reset-button {
+  display: block;
+  margin: 0 auto;
+  margin-top: 100px;
+  border: 1px solid rgba(147, 128, 108, .25);
+  background-color: #6e0047;
+  padding: .5em 1.75em;
+  color: #b46f9b;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 40px;
+
+  &:hover {
+    background-color: #964175;
+    color: #fff;
+  }
+}
