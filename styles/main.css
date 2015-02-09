@@ -208,6 +208,45 @@ body {
     color: #fff;
     background-color: #964175; }
 
+.health-bars {
+  display: flex;
+  padding: 0;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto; }
+
+#character-health {
+  align-self: flex-start; }
+
+.health {
+  width: 234px;
+  text-align: center;
+  color: white;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 20px; }
+
+#opponent-health {
+  align-self: flex-end; }
+
+progress[value] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 313px;
+  height: 56px;
+  padding-bottom: 15px;
+  margin-top: 15px; }
+
+progress[value]::-webkit-progress-bar {
+  background-color: #3d212f;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset; }
+
+progress[value]::-webkit-progress-value {
+  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.25)), -webkit-linear-gradient(left, #ce3e08, #f9b72a);
+  border-radius: 2px;
+  background-size: 45px 60px, 100% 100%, 100% 100%; }
+
 .fight-box-container {
   display: flex;
   padding: 0;
@@ -298,30 +337,6 @@ body {
   display: none;
   max-height: 0;
   opacity: 0; }
-
-progress[value] {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 300px;
-  height: 45px;
-  padding-bottom: 15px;
-  margin-top: 15px; }
-
-progress[value]::-webkit-progress-bar {
-  background-color: #3d212f;
-  border-radius: 2px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset; }
-
-progress[value]::-webkit-progress-value {
-  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.25)), -webkit-linear-gradient(left, #ce3e08, #f9b72a);
-  border-radius: 2px;
-  background-size: 45px 60px, 100% 100%, 100% 100%; }
-
-#character-health {
-  margin-left: 218px; }
-
-#opponent-health {
-  margin-left: 223px; }
 
 .game-over-container {
   display: flex;
