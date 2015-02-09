@@ -63,24 +63,11 @@ $('#fight-button').on('click',function(){
 
 $fightOutput.on('click', ".punchies-button", function(){
 
-  // var $characterHealth = $('#character-health');
-  // var injuredCharacter = $characterHealth.val();
-  //
-  // var $enemyHealth = $('#opponent-health');
-  // var injuredEnemy = $enemyHealth.val();
-
   var attack = (_.random(selectedCharacter.attackLower, selectedCharacter.attackUpper));
-  var injuredEnemy = randomEnemy.health -= attack;
-  // console.log('Enemies health: ' + injuredEnemy);
+  randomEnemy.health -= attack;
 
   var enemyAttack = (_.random(randomEnemy.attackLower, randomEnemy.attackUpper));
-  var injuredCharacter = selectedCharacter.health -= enemyAttack;
-  // console.log('Your health: ' + injuredCharacter);
-
-  var updateHealth = function(character) {
-      $('#character-health').attr('value', injuredCharacter);
-      $('#opponent-health').attr('value', injuredEnemy);
-    };
+  selectedCharacter.health -= enemyAttack;
 
   $('#character-health').attr('value', selectedCharacter.health);
   $('#opponent-health').attr('value', randomEnemy.health);

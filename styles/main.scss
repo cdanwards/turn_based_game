@@ -338,3 +338,46 @@ justify-content: center */;
 
 
 // Health Bar Stlyes
+
+/* progress {
+  display: block;
+  width: 500px;
+  height: 65px;
+background-color:
+} */
+
+progress[value] {
+  -webkit-appearance: none;
+   appearance: none;
+
+  width: 300px;
+  height: 45px;
+  padding-bottom: 15px;
+  margin-top: 15px;
+}
+
+progress[value]::-webkit-progress-bar {
+  background-color: #3d212f;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+
+progress[value]::-webkit-progress-value {
+  background-image:
+	   -webkit-linear-gradient(top,
+	                           rgba(255, 255, 255, .25),
+	                           rgba(0, 0, 0, .25)),
+	   -webkit-linear-gradient(left, #ce3e08, #f9b72a);
+
+  border-radius: 2px;
+  background-size: 45px 60px, 100% 100%, 100% 100%;
+}
+
+#character-health {
+  margin-left: 218px;
+}
+
+#opponent-health {
+  margin-left: 223px;
+}
