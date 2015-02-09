@@ -90,7 +90,7 @@ $fightOutput.on('click', ".punchies-button", function(){
   var punchbtn = $(".punchies-button");
       punchbtn.addClass('hidden'); // disable button
       setTimeout(function() {
-         punchbtn.removeClass('hidden').fadeIn('slow'); // enable button
+         punchbtn.removeClass('hidden'); // enable button
       }, 1000);
 
   var attack = (_.random(selectedCharacter.attackLower, selectedCharacter.attackUpper));
