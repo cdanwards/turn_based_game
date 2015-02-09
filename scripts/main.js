@@ -69,6 +69,7 @@ $fightOutput.on('click', ".punchies-button", function(){
   selectedCharacter.health -= enemyAttack;
 
   $('#character-health').attr('value', selectedCharacter.health);
+  $('#opponent-health').attr('value', randomEnemy.health);
 
   if (randomEnemy.health <= 0) {
     alert('You rock at punchies!');
