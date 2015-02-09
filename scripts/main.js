@@ -18,6 +18,10 @@ var sounds = {
   win : new Audio('sounds/win.mp3'),
   lose : new Audio('sounds/lose.mp3')
 };
+
+var audioLevel = document.getElementById("theme-song");
+audioLevel.volume = 0.5;
+
 var selectedCharacter;
 var charClicked;
 var randomEnemy;
@@ -35,7 +39,6 @@ var renderGameOverTemplate = _.template($('.game-over-screen-container').html())
 // Character select screen
 $('.start').on('click', function(){
   sounds.start.play();
-  $(".theme-song").detach();
   $(".start-screen-container").hide();
 
   function renderTemplate(characterData){
@@ -59,6 +62,7 @@ $('#fight-button').on('click',function(){
     var enemyClass = randomEnemy.class;
     $('#opponent-fight').addClass(enemyClass);
 
+    $("#theme-song").detach();
     sounds.fightSong.play();
 
     console.log(randomEnemy);
@@ -83,6 +87,13 @@ $fightOutput.on('click', ".punchies-button", function(){
 
   sounds.punch.play();
 
+  var punchbtn = $(".punchies-button");
+
+      punchbtn.addClass('hidden'); // disable button
+      setTimeout(function() {
+         punchbtn.removeClass('hidden').fadeIn('slow'); // enable button
+      }, 1000);
+
   var attack = (_.random(selectedCharacter.attackLower, selectedCharacter.attackUpper));
   randomEnemy.health -= attack;
 
@@ -101,12 +112,12 @@ $fightOutput.on('click', ".punchies-button", function(){
     $gameOverOutPut.append(renderGameOverTemplate);
   }
 
-  if (randomEnemy.health <= 0) {
+  if (selectedCharacter.health <= 0) {
     $(".you-win").addClass('hidden');
-    sounds.win.play();
-  } else if ( selectedCharacter.health <= 0) {
-    $(".you-lose").addClass('hidden');
     sounds.lose.play();
+  } else if (randomEnemy.health <= 0) {
+    $(".you-lose").addClass('hidden');
+    sounds.win.play();
   }
 
   console.log('Enemies health: ' + randomEnemy.health);
