@@ -1,41 +1,366 @@
-/*
-Error: Invalid CSS after "}": expected "}", was ""
-        on line 444 of styles/main.scss
+body {
+  background-image: url("../images/background.png");
+  background-size: cover; }
 
-439: }
-440: 
-441: #opponent-health {
-442:   margin-left: 223px;
-443: }
+.hidden {
+  display: none; }
 
-Backtrace:
-styles/main.scss:444
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.9/lib/sass/scss/parser.rb:1165:in `expected'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.9/lib/sass/scss/parser.rb:1101:in `expected'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.9/lib/sass/scss/parser.rb:1096:in `tok!'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.9/lib/sass/scss/parser.rb:643:in `block'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.9/lib/sass/scss/parser.rb:635:in `ruleset'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.9/lib/sass/scss/parser.rb:660:in `block_child'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.9/lib/sass/scss/parser.rb:653:in `block_contents'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.9/lib/sass/scss/parser.rb:117:in `stylesheet'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.9/lib/sass/scss/parser.rb:42:in `parse'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.9/lib/sass/engine.rb:393:in `_to_tree'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.9/lib/sass/engine.rb:368:in `_render_with_sourcemap'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.9/lib/sass/engine.rb:285:in `render_with_sourcemap'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.9/lib/sass/plugin/compiler.rb:490:in `update_stylesheet'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.9/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.9/lib/sass/plugin/compiler.rb:209:in `each'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.9/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.9/lib/sass/plugin/compiler.rb:470:in `on_file_changed'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.9/lib/sass/plugin/compiler.rb:328:in `block in watch'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.9/vendor/listen/lib/listen/listener.rb:252:in `call'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.9/vendor/listen/lib/listen/listener.rb:252:in `on_change'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.9/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.9/vendor/listen/lib/listen/adapters/polling.rb:48:in `call'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.9/vendor/listen/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.9/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"}\": expected \"}\", was \"\"\A         on line 444 of styles/main.scss\A \A 439: }\A 440: \A 441: #opponent-health {\A 442:   margin-left: 223px;\A 443: }"; }
+.start-screen-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 730px; }
+  .start-screen-container .fight {
+    font-size: 60px;
+    margin-top: -80px;
+    margin-bottom: 90px;
+    margin-right: -95px;
+    align-self: flex-end;
+    color: white;
+    font-family: 'Press Start 2P', cursive; }
+  .start-screen-container .start {
+    margin-top: 80px;
+    color: #B46F9B;
+    padding: .5em 1.75em;
+    font-size: 50px;
+    font-family: 'Press Start 2P', cursive;
+    border: 1px solid rgba(147, 128, 108, 0.25);
+    background-color: #6E0047; }
+    .start-screen-container .start:hover {
+      color: #fff;
+      background-color: #964175; }
+
+.start-screen-logo {
+  display: block;
+  flex: 1;
+  margin-left: -50px; }
+
+.choose-fighter {
+  margin: 20px 0;
+  text-align: center;
+  color: white;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 20px; }
+
+.characterbox li {
+  list-style: none; }
+  .characterbox li span {
+    color: white; }
+
+.characterbox {
+  display: flex;
+  padding: 0;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto; }
+  .characterbox li {
+    width: 180px;
+    height: 180px;
+    min-width: 180px;
+    min-height: 180px;
+    margin: 10px;
+    border: 2px solid white; }
+
+.mordecai {
+  padding: 5px;
+  background-image: url("../images/mordecai.png");
+  background-size: cover;
+  cursor: pointer; }
+  .mordecai:hover {
+    background-color: rgba(180, 111, 155, 0.45); }
+  .mordecai span {
+    padding-top: 5px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 20px; }
+
+.mordecai-background {
+  background-image: url("../images/mordecai.png");
+  background-size: cover; }
+
+.rigby {
+  padding: 5px;
+  background-image: url("../images/rigby.png");
+  background-size: cover;
+  background-position: center center;
+  cursor: pointer; }
+  .rigby:hover {
+    background-color: rgba(180, 111, 155, 0.45); }
+  .rigby span {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 20px; }
+
+.rigby-background {
+  background: url("../images/rigby.png") no-repeat center; }
+
+.benson {
+  padding: 5px;
+  background-image: url("../images/benson.png");
+  background-size: cover;
+  cursor: pointer; }
+  .benson:hover {
+    background-color: rgba(180, 111, 155, 0.45); }
+  .benson span {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 20px; }
+
+.benson-background {
+  background-image: url("../images/benson.png");
+  background-size: cover; }
+
+.pops {
+  padding: 5px;
+  background: url("../images/pops.png") no-repeat center;
+  background-size: cover;
+  background-position: 25% 41%;
+  cursor: pointer; }
+  .pops:hover {
+    background-color: rgba(180, 111, 155, 0.45); }
+  .pops span {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 20px; }
+
+.pops-background {
+  background: url("../images/pops.png") no-repeat center; }
+
+.skips {
+  padding: 5px;
+  background-image: url("../images/skips.png");
+  background-size: cover;
+  cursor: pointer; }
+  .skips:hover {
+    background-color: rgba(180, 111, 155, 0.45); }
+  .skips span {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 20px; }
+
+.skips-background {
+  background-image: url("../images/skips.png");
+  background-size: cover; }
+
+.muscleman {
+  padding: 5px;
+  background: url("../images/muscleman.png") no-repeat center;
+  cursor: pointer; }
+  .muscleman:hover {
+    background-color: rgba(180, 111, 155, 0.45); }
+  .muscleman span {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 20px; }
+
+.muscleman-background {
+  background: url("../images/muscleman.png") no-repeat center; }
+
+.player-box-container {
+  display: flex;
+  padding: 0;
+  flex-direction: row;
+  /*   align-items: center;
+  justify-content: center */
+  margin: 0 auto;
+  width: 900px; }
+
+#selected-character {
+  display: inline-block;
+  margin: 10px auto 25px;
+  position: relative;
+  padding: 5px;
+  align-self: flex-start;
+  background-color: green;
+  width: 300px;
+  height: 300px;
+  min-width: 300px;
+  min-height: 300px;
+  border: 2px solid white; }
+
+.vs-character-select {
+  margin-top: 140px;
+  margin-left: 53px;
+  color: white;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 80px; }
+
+.opponent-character {
+  display: inline-block;
+  margin-top: 10px;
+  margin-left: 38px;
+  padding: 5px;
+  align-self: flex-end;
+  background-color: red;
+  width: 300px;
+  height: 300px;
+  min-width: 300px;
+  min-height: 300px;
+  border: 2px solid white; }
+
+#fight-button {
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  color: #B46F9B;
+  padding: .5em 1.75em;
+  font-size: 50px;
+  font-family: 'Press Start 2P', cursive;
+  border: 1px solid rgba(147, 128, 108, 0.25);
+  background-color: #6E0047; }
+  #fight-button:hover {
+    color: #fff;
+    background-color: #964175; }
+
+.fight-box-container {
+  display: flex;
+  padding: 0;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto; }
+
+.selected-character-fight {
+  display: inline-block;
+  padding: 5px;
+  align-self: flex-start;
+  background-color: green;
+  width: 300px;
+  height: 300px;
+  min-width: 300px;
+  min-height: 300px;
+  border: 2px solid white; }
+
+#opponent-fight {
+  display: inline-block;
+  padding: 5px;
+  align-self: flex-end;
+  background-color: red;
+  width: 300px;
+  height: 300px;
+  min-width: 300px;
+  min-height: 300px;
+  border: 2px solid white; }
+
+.summer-time {
+  background-image: url("../images/summertime.png");
+  background-size: cover; }
+
+.death {
+  background: url("../images/death.png") no-repeat center; }
+
+.garrett {
+  background: url("../images/garrettbobbyferguson.png") no-repeat center; }
+
+.iacedrom-and-ybgir {
+  background-image: url("../images/iacedromandybgir.png");
+  background-size: cover; }
+
+.thomas {
+  background-image: url("../images/thomas.png");
+  background-size: cover; }
+
+.tmpc {
+  background: url("../images/tmpc.png") no-repeat center; }
+
+.punchies-button {
+  display: block;
+  margin: 0 auto;
+  margin-top: 100px;
+  position: relative;
+  color: #B46F9B;
+  padding: .1em .5em;
+  font-size: 40px;
+  font-family: 'Press Start 2P', cursive;
+  border: 1px solid rgba(147, 128, 108, 0.25);
+  background-color: #6E0047; }
+  .punchies-button:hover {
+    color: #fff;
+    background-color: #964175; }
+
+.reset-button {
+  display: block;
+  margin: 0 auto;
+  margin-top: 200px;
+  position: relative;
+  color: #B46F9B;
+  padding: .2em .5em;
+  font-size: 40px;
+  font-family: 'Press Start 2P', cursive;
+  border: 1px solid rgba(147, 128, 108, 0.25);
+  background-color: #6E0047; }
+  .reset-button:hover {
+    color: #fff;
+    background-color: #964175; }
+
+.hidden {
+  display: none;
+  max-height: 0;
+  opacity: 0; }
+
+.fight-screen-container {
+  position: relative; }
+
+.you-win {
+  position: absolute;
+  top: 10;
+  left: 20%;
+  display: inline-block;
+  margin: 0 auto;
+  margin-top: 50px;
+  position: relative;
+  color: #B46F9B;
+  font-size: 40px;
+  font-family: 'Press Start 2P', cursive;
+  border: 1px solid rgba(147, 128, 108, 0.25);
+  background-color: #6E0047; }
+
+.you-lose {
+  position: absolute;
+  top: 10;
+  left: 15%;
+  display: inline-block;
+  margin: 0 auto;
+  margin-top: 50px;
+  position: relative;
+  color: #B46F9B;
+  font-size: 40px;
+  font-family: 'Press Start 2P', cursive;
+  border: 1px solid rgba(147, 128, 108, 0.25);
+  background-color: #6E0047; }
+
+.game-over {
+  position: absolute;
+  top: 20;
+  left: 20%;
+  display: inline-block;
+  text-align: center;
+  font-size: 80px;
+  z-index: 1;
+  line-height: 1.5;
+  font-family: 'Press Start 2P', cursive;
+  color: white;
+  background-color: red; }
+
+progress[value] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 300px;
+  height: 45px;
+  padding-bottom: 15px;
+  margin-top: 15px; }
+
+progress[value]::-webkit-progress-bar {
+  background-color: #3d212f;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset; }
+
+progress[value]::-webkit-progress-value {
+  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.25)), -webkit-linear-gradient(left, #ce3e08, #f9b72a);
+  border-radius: 2px;
+  background-size: 45px 60px, 100% 100%, 100% 100%; }
+
+#character-health {
+  margin-left: 218px; }
+
+#opponent-health {
+  margin-left: 223px; }
+
+/*# sourceMappingURL=main.css.map */

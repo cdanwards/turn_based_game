@@ -359,7 +359,7 @@ justify-content: center */;
 .reset-button {
   display: block;
   margin: 0 auto;
-  margin-top: 100px;
+  margin-top: 200px;
   position: relative;
   color: #B46F9B;
   padding: .2em .5em;
@@ -384,10 +384,42 @@ justify-content: center */;
   position: relative;
 }
 
+
+.you-win {
+  position: absolute;
+  top: 10;
+  left: 20%;
+  display: inline-block;
+  margin: 0 auto;
+  margin-top: 50px;
+  position: relative;
+  color: #B46F9B;
+  font-size: 40px;
+  font-family: 'Press Start 2P', cursive;
+  border: 1px solid rgba(147, 128, 108, .25);
+  background-color: #6E0047;
+}
+
+.you-lose {
+  position: absolute;
+  top: 10;
+  left: 15%;
+  display: inline-block;
+  margin: 0 auto;
+  margin-top: 50px;
+  position: relative;
+  color: #B46F9B;
+  font-size: 40px;
+  font-family: 'Press Start 2P', cursive;
+  border: 1px solid rgba(147, 128, 108, .25);
+  background-color: #6E0047;
+}
+
 .game-over {
   position: absolute;
-  bottom: 20;
+  top: 20;
   left: 20%;
+  display: inline-block;
   text-align: center;
   font-size: 80px;
   z-index: 1;
@@ -395,16 +427,7 @@ justify-content: center */;
   font-family: 'Press Start 2P', cursive;
   color: white;
   background-color: red;
-
-
-// Health Bar Stlyes
-
-/* progress {
-  display: block;
-  width: 500px;
-  height: 65px;
-background-color:
-} */
+}
 
 progress[value] {
   -webkit-appearance: none;
