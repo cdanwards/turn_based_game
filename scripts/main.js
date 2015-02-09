@@ -45,14 +45,11 @@ $('#fight-button').on('click',function(){
     $(".character-screen").hide();
     console.log(selectedCharacter);
 
-
     function renderTemplate(data){
       $fightOutput.append(renderFightTemplate(data));
     }
     renderTemplate();
-    $('.opponent-fight').addClass('.muscleman-background');
     $('.selected-character-fight').addClass(charClicked + '-background');
-
 
     randomEnemy = _.sample(villains);
     var enemyClass = randomEnemy.class;
@@ -65,11 +62,25 @@ $('#fight-button').on('click',function(){
 
 
 $fightOutput.on('click', ".punchies-button", function(){
+
+  // var $characterHealth = $('#character-health');
+  // var injuredCharacter = $characterHealth.val();
+  //
+  // var $enemyHealth = $('#opponent-health');
+  // var injuredEnemy = $enemyHealth.val();
+
   var attack = (_.random(selectedCharacter.attackLower, selectedCharacter.attackUpper));
-  randomEnemy.health -= attack;
+  var injuredEnemy = randomEnemy.health -= attack;
+  // console.log('Enemies health: ' + injuredEnemy);
 
   var enemyAttack = (_.random(randomEnemy.attackLower, randomEnemy.attackUpper));
-  selectedCharacter.health -= enemyAttack;
+  var injuredCharacter = selectedCharacter.health -= enemyAttack;
+  // console.log('Your health: ' + injuredCharacter);
+
+  var updateHealth = function(character) {
+      $('#character-health').attr('value', injuredCharacter);
+      $('#opponent-health').attr('value', injuredEnemy);
+    };
 
   if (randomEnemy.health <= 0) {
     alert('You rock at punchies!');
@@ -92,31 +103,6 @@ characterNames.forEach(function(char) {
       charClicked = char;
     });
 });
-
-//
-// Character Constructors
-//
-
-var Character = function (options) {
-  options = options || {};
-  _.defaults(options, {
-    attackUpper: 40,
-    attackLower: 10,
-    health: 100
-  });
-  _.extend(this, options);
-};
-
-var Villain = function (options) {
-  options = options || {};
-  _.defaults(options, {
-    attack: _.random(10, 45),
-    health: 100
-  });
-  _.extend(this, options);
-};
-
-
 
 });
 

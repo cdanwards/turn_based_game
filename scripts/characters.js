@@ -1,4 +1,3 @@
-
 var Character = function (options) {
   options = options || {};
   _.defaults(options, {
@@ -18,8 +17,6 @@ var Villain = function (options) {
   });
   _.extend(this, options);
 };
-
-
 
 var charactersObject = {
   mordecai : new Character({
@@ -46,14 +43,6 @@ var charactersObject = {
 var villains = {
   death : new Villain({
     name: 'Death',
-<<<<<<< HEAD
-  }),
-  thomas : new Villain({
-    name: 'Thomas',
-  }),
-  garrettBobbyFerguson: new Villain({
-    name: 'Garrett Bobby Ferguson',
-=======
     class: 'death'
   }),
   thomas : new Villain({
@@ -63,7 +52,6 @@ var villains = {
   garrettBobbyFerguson: new Villain({
     name: 'Garrett Bobby Ferguson',
     class: 'garrett'
->>>>>>> 1f321c3f052983abb70eef4b548138eab2b410f2
   }),
   iacedromAndYbigr : new Villain({
     name: 'Iacedrom And Ybigr',
@@ -75,13 +63,6 @@ var villains = {
   }),
   theMasterPrankCaller : new Villain({
     name: 'The Master Prank Caller',
-<<<<<<< HEAD
-=======
     class: 'tmpc'
->>>>>>> 1f321c3f052983abb70eef4b548138eab2b410f2
   })
 };
-
-// Character.prototype.attack = function(i) {
-//   i.health -= strength;
-// };

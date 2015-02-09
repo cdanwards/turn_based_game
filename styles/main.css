@@ -228,11 +228,7 @@ body {
   min-height: 300px;
   border: 2px solid white; }
 
-<<<<<<< HEAD
-.opponent-fight {
-=======
 #opponent-fight {
->>>>>>> 1f321c3f052983abb70eef4b548138eab2b410f2
   display: inline-block;
   padding: 5px;
   align-self: flex-end;
@@ -248,11 +244,6 @@ body {
   background-size: cover; }
 
 .death {
-<<<<<<< HEAD
-  background-image: url("../images/death.png");
-  background-size: cover; }
-
-=======
   background: url("../images/death.png") no-repeat center; }
 
 .garrett {
@@ -269,5 +260,4 @@ body {
 .tmpc {
   background: url("../images/tmpc.png") no-repeat center; }
 
->>>>>>> 1f321c3f052983abb70eef4b548138eab2b410f2
 /*# sourceMappingURL=main.css.map */
