@@ -1,3 +1,7 @@
+//
+// Domain / Data
+//
+
 var Character = function (options) {
   options = options || {};
   _.defaults(options, {
