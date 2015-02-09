@@ -88,7 +88,6 @@ $fightOutput.on('click', ".punchies-button", function(){
   sounds.punch.play();
 
   var punchbtn = $(".punchies-button");
-
       punchbtn.addClass('hidden'); // disable button
       setTimeout(function() {
          punchbtn.removeClass('hidden').fadeIn('slow'); // enable button
