@@ -22,10 +22,13 @@ var randomEnemy;
 // Character select div
 var $characterOutput = $('.character-screen');
 var $fightOutput = $('.fight-screen');
+var $gameOverOutPut = $('.game-over-screen');
+
 
 //Template
 var renderCharacterTemplate = _.template($('.character-select').html());
 var renderFightTemplate = _.template($('.fight-screen-container').html());
+var renderGameOverTemplate = _.template($('.game-over-screen-container').html());
 
 // Character select screen
 $('.start').on('click', function(){
@@ -73,9 +76,10 @@ $fightOutput.on('click', ".punchies-button", function(){
   $('#opponent-health').attr('value', randomEnemy.health);
 
   if (randomEnemy.health <= 0 || selectedCharacter.health < 0) {
-    $(".punchies-button").addClass('hidden');
-    $(".reset-button").removeClass('hidden');
-    $(".game-over").removeClass('hidden');
+    $(".fight-box-container").hide();
+    $(".health-bars").hide();
+    $(".punchies-button-container").hide();
+    $gameOverOutPut.append(renderGameOverTemplate);
   }
   if (randomEnemy.health <= 0) {
     $(".you-win").removeClass('hidden')

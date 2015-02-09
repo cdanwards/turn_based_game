@@ -176,8 +176,7 @@ body {
   border: 2px solid white; }
 
 .vs-character-select {
-  margin-top: 140px;
-  margin-left: 53px;
+  margin: 39px 29px 0 45px;
   color: white;
   font-family: 'Press Start 2P', cursive;
   font-size: 80px; }
@@ -260,17 +259,23 @@ body {
 .tmpc {
   background: url("../images/tmpc.png") no-repeat center; }
 
+.punchies-button-container {
+  display: flex;
+  padding: 0;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto; }
+
 .punchies-button {
-  display: block;
-  margin: 0 auto;
-  margin-top: 100px;
-  position: relative;
-  color: #B46F9B;
-  padding: .1em .5em;
+  margin-top: 30px;
+  color: #b46f9b;
+  padding: .5em 1.75em;
   font-size: 40px;
+  align-self: flex-start;
   font-family: 'Press Start 2P', cursive;
   border: 1px solid rgba(147, 128, 108, 0.25);
-  background-color: #6E0047; }
+  background-color: #6e0047; }
   .punchies-button:hover {
     color: #fff;
     background-color: #964175; }
@@ -279,7 +284,6 @@ body {
   display: block;
   margin: 0 auto;
   margin-top: 200px;
-  position: relative;
   color: #B46F9B;
   padding: .2em .5em;
   font-size: 40px;
@@ -294,50 +298,6 @@ body {
   display: none;
   max-height: 0;
   opacity: 0; }
-
-.fight-screen-container {
-  position: relative; }
-
-.you-win {
-  position: absolute;
-  top: 10;
-  left: 20%;
-  display: inline-block;
-  margin: 0 auto;
-  margin-top: 50px;
-  position: relative;
-  color: #B46F9B;
-  font-size: 40px;
-  font-family: 'Press Start 2P', cursive;
-  border: 1px solid rgba(147, 128, 108, 0.25);
-  background-color: #6E0047; }
-
-.you-lose {
-  position: absolute;
-  top: 10;
-  left: 15%;
-  display: inline-block;
-  margin: 0 auto;
-  margin-top: 50px;
-  position: relative;
-  color: #B46F9B;
-  font-size: 40px;
-  font-family: 'Press Start 2P', cursive;
-  border: 1px solid rgba(147, 128, 108, 0.25);
-  background-color: #6E0047; }
-
-.game-over {
-  position: absolute;
-  top: 20;
-  left: 20%;
-  display: inline-block;
-  text-align: center;
-  font-size: 80px;
-  z-index: 1;
-  line-height: 1.5;
-  font-family: 'Press Start 2P', cursive;
-  color: white;
-  background-color: red; }
 
 progress[value] {
   -webkit-appearance: none;
@@ -362,5 +322,50 @@ progress[value]::-webkit-progress-value {
 
 #opponent-health {
   margin-left: 223px; }
+
+.game-over-container {
+  display: flex;
+  padding: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto; }
+
+/* .you-win {
+  display: inline-block;
+  margin: 0 auto;
+  margin-top: 50px;
+  position: relative;
+  color: #B46F9B;
+  font-size: 40px;
+  font-family: 'Press Start 2P', cursive;
+  border: 1px solid rgba(147, 128, 108, .25);
+  background-color: #6E0047;
+}
+
+.you-lose {
+  display: inline-block;
+  margin: 0 auto;
+  margin-top: 50px;
+  position: relative;
+  color: #B46F9B;
+  font-size: 40px;
+  font-family: 'Press Start 2P', cursive;
+  border: 1px solid rgba(147, 128, 108, .25);
+  background-color: #6E0047;
+}
+
+.game-over {
+  top: 20;
+  display: inline-block;
+  text-align: center;
+  font-size: 80px;
+  z-index: 1;
+  line-height: 1.5;
+  font-family: 'Press Start 2P', cursive;
+  color: white;
+  background-color: red;
+}
+ */
 
 /*# sourceMappingURL=main.css.map */

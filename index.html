@@ -15,6 +15,7 @@
 
 <div class="character-screen"></div>
 <div class="fight-screen"></div>
+<div class="game-over-screen"></div>
 
 <div class="start-screen-container">
 
@@ -70,23 +71,33 @@
 
 <script type="text/template" class="fight-screen-container">
 
-<progress id='character-health' max="100" value="100"></progress>
-<progress id='opponent-health' max="100" value="100"></progress>
+  <div class="health-bars">
+    <progress id='character-health' max="100" value="100"></progress>
+    <progress id='opponent-health' max="100" value="100"></progress>
+  </div>
 
-    <div class="fight-box-container">
-      <div class="selected-character-fight"></div>
+  <div class="fight-box-container">
+    <div class="selected-character-fight"></div>
       <span class="vs-character-select">VS</span>
       <div id="opponent-fight"></div>
-      <h2 class="game-over hidden">GAME OVER</h2>
-      <h2 class="you-win hidden">YOU WIN PUNCHIES</h2>
-      <h2 class="you-lose hidden">YOU'RE NOT SO GREAT AT PUNCHIES</h2>
-    </div>
-    <button class="punchies-button">PUNCHIES</button>
-    <button class="reset-button hidden">RESET</button>
-
-
+  </div>
+  <div class="punchies-button-container">
+    <button class="punchies-button">GIVE THEM PUNCHIES</button>
+  </div>
 
 </script>
+
+<script type="text/template" class="game-over-screen-container">
+
+  <div class="gameOver">
+    <h2 class="game-over">GAME OVER</h2>
+    <h2 class="you-win">YOU WIN PUNCHIES</h2>
+    <h2 class="you-lose">YOU'RE NOT SO GREAT AT PUNCHIES</h2>
+  </div>
+  <button class="reset-button hidden">RESET</button>
+
+</script>
+
 
 
 </body>
