@@ -260,4 +260,54 @@ body {
 .tmpc {
   background: url("../images/tmpc.png") no-repeat center; }
 
+.punchies-button {
+  display: block;
+  margin: 0 auto;
+  margin-top: 100px;
+  position: relative;
+  color: #B46F9B;
+  padding: .1em .5em;
+  font-size: 40px;
+  font-family: 'Press Start 2P', cursive;
+  border: 1px solid rgba(147, 128, 108, 0.25);
+  background-color: #6E0047; }
+  .punchies-button:hover {
+    color: #fff;
+    background-color: #964175; }
+
+.reset-button {
+  display: block;
+  margin: 0 auto;
+  margin-top: 100px;
+  position: relative;
+  color: #B46F9B;
+  padding: .2em .5em;
+  font-size: 40px;
+  font-family: 'Press Start 2P', cursive;
+  border: 1px solid rgba(147, 128, 108, 0.25);
+  background-color: #6E0047; }
+  .reset-button:hover {
+    color: #fff;
+    background-color: #964175; }
+
+.hidden {
+  display: none;
+  max-height: 0;
+  opacity: 0; }
+
+.fight-screen-container {
+  position: relative; }
+
+.game-over {
+  position: absolute;
+  bottom: 20;
+  left: 20%;
+  text-align: center;
+  font-size: 80px;
+  z-index: 1;
+  line-height: 1.5;
+  font-family: 'Press Start 2P', cursive;
+  color: white;
+  background-color: red; }
+
 /*# sourceMappingURL=main.css.map */

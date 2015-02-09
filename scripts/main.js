@@ -71,11 +71,17 @@ $fightOutput.on('click', ".punchies-button", function(){
   $('#character-health').attr('value', selectedCharacter.health);
   $('#opponent-health').attr('value', randomEnemy.health);
 
-  if (randomEnemy.health <= 0) {
-    alert('You rock at punchies!');
-  } else if (selectedCharacter.health < 0) {
-    alert("You're not so great at punchies...LOSER!");
-  }
+  if (randomEnemy.health <= 0 || selectedCharacter.health < 0) {
+    // alert('You rock at punchies!');
+    $(".punchies-button").addClass('hidden');
+    $(".reset-button").removeClass('hidden');
+    $(".game-over").removeClass('hidden');
+}
+// else if (selectedCharacter.health < 0) {
+  //   alert("You're not so great at punchies...LOSER!");
+  //   $(".punchies-button").addClass('hidden');
+  //   $(".reset-button").removeClass('hidden');
+// }
 
   console.log('Enemies health: ' + randomEnemy.health);
   console.log('Your health: ' + selectedCharacter.health);
